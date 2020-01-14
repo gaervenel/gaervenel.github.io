@@ -1,0 +1,9 @@
+---
+title: Gaervenel &amp; Elubar
+---
+
+h1 = current_page.data.title
+
+ul
+  - sitemap.resources.select { |resource| resource.data.title }.each do |resource|
+    li = link_to(resource.data.title, resource, relative: true)

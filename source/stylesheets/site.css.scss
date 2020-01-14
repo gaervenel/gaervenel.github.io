@@ -1,24 +1,68 @@
+$grey: #999;
+$light-grey: #ddd;
+$dark-grey: #777;
+$black: #111;
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+  color: $black;
+  margin: auto;
+  padding: 1em;
+  font-size: 16px;
+  max-width: 980px;
 }
 
-a {
-  color: rgba(#000, 0.7);
-
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
-  }
+h2 {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-variant: small-caps;
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+h2 + p:first-letter {
+    float: left;
+    font-size: 75px;
+    line-height: 60px;
+    padding: 4px 8px 0 3px;
+}
+
+h3 {
+    font-size: 32px;
+    font-variant: small-caps;
+    margin-top: 1rem;
+    margin-bottom: 6px;
+}
+
+h4 {
+    font-size: 24px;
+    font-variant: small-caps;
+    border-bottom: 2px solid $dark-grey;
+    margin-bottom: 2px;
+}
+
+p {
+    margin: 0;
+}
+
+p + p {
+    text-indent: 1em;
+}
+
+.blockquote {
+    font-style: italic;
+    margin-bottom: 1rem;
+    p:first-child:first-line {
+        font-variant: small-caps;
+        font-style: normal;
+    }
+    .attribution {
+        text-align: right;
+    }
+}
+
+.spell, .magic, .reference {
+    font-style: italic;
 }

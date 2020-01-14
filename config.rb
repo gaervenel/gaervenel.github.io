@@ -1,9 +1,15 @@
+# Somebody is using deprecated URI methods, which is cluttering my output
+require 'warning'
+Warning.ignore(/URI.*escape is obsolete/)
+
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
+
+set :slim, tabsize: 2
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
@@ -28,14 +34,8 @@ page '/*.txt', layout: false
 # )
 
 # Helpers
-# Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
-
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+#set :helpers_dir, 'lib/helpers'
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
