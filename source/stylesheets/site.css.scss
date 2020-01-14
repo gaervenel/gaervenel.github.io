@@ -17,6 +17,7 @@ body {
 
 h2 {
     font-size: 40px;
+    color: $dark-grey;
     margin-top: 0;
     margin-bottom: 1rem;
     font-variant: small-caps;
@@ -25,6 +26,7 @@ h2 {
 h2 + p:first-letter {
     float: left;
     font-size: 75px;
+    color: $grey;
     line-height: 60px;
     padding: 4px 8px 0 3px;
 }
@@ -32,6 +34,7 @@ h2 + p:first-letter {
 h3 {
     font-size: 32px;
     font-variant: small-caps;
+    color: $dark-grey;
     margin-top: 1rem;
     margin-bottom: 6px;
 }
@@ -39,7 +42,9 @@ h3 {
 h4 {
     font-size: 24px;
     font-variant: small-caps;
+    color: $dark-grey;
     border-bottom: 2px solid $dark-grey;
+    margin-top: 1rem;
     margin-bottom: 2px;
 }
 
@@ -49,6 +54,37 @@ p {
 
 p + p {
     text-indent: 1em;
+}
+
+table {
+    margin: 1em 0;
+    border-collapse: collapse;
+    caption {
+        font-weight: bold;
+        font-variant: small-caps;
+        text-align: left;
+    }
+    th {
+        font-weight: bold;
+        text-align: left;
+    }
+    th, td {
+        padding: 0 4px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    tbody {
+        tr:nth-child(even) {
+            background-color: $light-grey;
+        }
+    }
+}
+
+// Tables have a bottom margin equal to the margin we usually leave
+// before a heading, so if we end a section with a table, remove that
+// extra space.
+table + h3, table + h4 {
+    margin-top: 0;
 }
 
 .blockquote {
@@ -63,6 +99,6 @@ p + p {
     }
 }
 
-.spell, .magic, .reference {
+.spell, .magic, .reference, .elvish {
     font-style: italic;
 }
