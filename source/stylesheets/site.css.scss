@@ -1,3 +1,5 @@
+@import '5e_fonts';
+
 $grey: #999;
 $light-grey: #ddd;
 $dark-grey: #777;
@@ -12,15 +14,20 @@ body {
   margin: auto;
   padding: 1em;
   font-size: 16px;
+  font-family: 'Bookinsanity', serif;
   max-width: 980px;
 }
 
-h2 {
-    font-size: 40px;
+h2, h3, h4, h5 {
     color: $dark-grey;
+    font-family: 'Mr Eaves Small Caps', serif;
+    font-variant: small-caps;
+}
+
+h2 {
+    font-size: 48px;
     margin-top: 0;
     margin-bottom: 1rem;
-    font-variant: small-caps;
 }
 
 h2 + p:first-letter {
@@ -32,17 +39,20 @@ h2 + p:first-letter {
 }
 
 h3 {
-    font-size: 32px;
-    font-variant: small-caps;
-    color: $dark-grey;
+    font-size: 40px;
     margin-top: 1rem;
     margin-bottom: 6px;
 }
 
 h4 {
+    font-size: 32px;
+    border-bottom: 2px solid $dark-grey;
+    margin-top: 1rem;
+    margin-bottom: 2px;
+}
+
+h5 {
     font-size: 24px;
-    font-variant: small-caps;
-    color: $dark-grey;
     border-bottom: 2px solid $dark-grey;
     margin-top: 1rem;
     margin-bottom: 2px;
@@ -59,7 +69,9 @@ p + p {
 table {
     margin: 1em 0;
     border-collapse: collapse;
+    font-family: 'Scaly Sans', sans-serif;
     caption {
+        font-family: 'Scaly Sans Caps Bold', sans-serif;
         font-weight: bold;
         font-variant: small-caps;
         text-align: left;
@@ -78,6 +90,10 @@ table {
             background-color: $light-grey;
         }
     }
+    .spell, .magic, .reference, .elvish {
+        font-family: 'Scaly Sans Italic', sans-serif;
+        font-style: italic;
+    }
 }
 
 // Tables have a bottom margin equal to the margin we usually leave
@@ -87,18 +103,29 @@ table + h3, table + h4 {
     margin-top: 0;
 }
 
+.subhead {
+    font-family: 'Bookinsanity Bold Italic', serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
 .blockquote {
+    font-family: 'Bookinsanity Italic', serif;
     font-style: italic;
     margin-bottom: 1rem;
     p:first-child:first-line {
+        font-family: 'Mr Eaves Small Caps', serif;
         font-variant: small-caps;
         font-style: normal;
     }
     .attribution {
         text-align: right;
+        font-family: 'Bookinsanity', serif;
+        font-style: normal;
     }
 }
 
 .spell, .magic, .reference, .elvish {
+    font-family: 'Bookinsanity Italic', serif;
     font-style: italic;
 }
