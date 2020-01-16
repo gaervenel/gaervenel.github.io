@@ -66,6 +66,13 @@ p + p {
     text-indent: 1em;
 }
 
+ul.simple {
+    margin: 0;
+    padding: 0 0 0.5em 1em;
+    list-style: none;
+    white-space: nowrap;
+}
+
 table {
     margin: 1em 0;
     border-collapse: collapse;
@@ -85,14 +92,23 @@ table {
         font-size: 16px;
         line-height: 1.4;
     }
-    tbody {
+    // If we only have one tbody, then we'll want to stripe the rows
+    tbody:only-of-type {
         tr:nth-child(even) {
             background-color: $light-grey;
         }
     }
+    // If we have more than one tbody, then let's stripe them instead
+    tbody:nth-child(even) {
+        background-color: $light-grey;
+    }
     .spell, .magic, .reference, .elvish {
         font-family: 'Scaly Sans Italic', sans-serif;
         font-style: italic;
+    }
+    tfoot td {
+        font-size: 14px;
+        line-height: normal;
     }
 }
 
@@ -125,7 +141,15 @@ table + h3, table + h4 {
     }
 }
 
+.emph, .strong, .b {
+    font-weight: bolder;
+}
+
 .spell, .magic, .reference, .elvish {
     font-family: 'Bookinsanity Italic', serif;
     font-style: italic;
+}
+
+.group {
+    page-break-inside: avoid;
 }
