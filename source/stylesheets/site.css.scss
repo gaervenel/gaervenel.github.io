@@ -30,12 +30,20 @@ h2 {
     margin-bottom: 1rem;
 }
 
-h2 + p:first-letter {
+h2 + p::first-letter {
+    font-family: 'Solbera Imitation', serif;
+    color: $dark-grey;
     float: left;
-    font-size: 75px;
-    color: $grey;
-    line-height: 60px;
-    padding: 4px 8px 0 3px;
+    font-size: 6em;
+    line-height: 0.8;
+    padding-right: 0.3rem;
+}
+
+h2 + p::first-line {
+    font-family: 'Mr Eaves Small Caps', serif;
+    font-variant: small-caps;
+    font-size: 20px;
+    line-height: 1;
 }
 
 h3 {
