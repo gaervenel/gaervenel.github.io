@@ -20,7 +20,7 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 
 # With alternative layout
-# page '/path/to/file.html', layout: 'other_layout'
+page '/worksheets/*', layout: 'worksheet'
 
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/
@@ -35,7 +35,7 @@ page '/*.txt', layout: false
 
 # Helpers
 # https://middlemanapp.com/basics/helper-methods/
-#set :helpers_dir, 'lib/helpers'
+set :helpers_dir, 'lib/helpers'
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings

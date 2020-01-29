@@ -1,0 +1,13 @@
+---
+title: Calendar Worksheet
+---
+- (6..13).each do |month|
+  .page.tall
+    h4.pull-up Year of Falling Snow, Month #{month}
+    - (1..10).each do |day|
+      h5.pull-up
+        | Day #{(month - 1) * 10 + day} #{solstice?(month, day) ? '(Solstice)' : ''}#{equinox?(month, day) ? ' (Equinox)' : ''}
+      .day.flex.sixths
+        - %w(Dawnday Eclipse Eventide Nightfel Lens Overnight).each do |period|
+          div class="#{period} box"
+            .b.small="#{period}#{rest?(day, period) ? '*' : ''}"
