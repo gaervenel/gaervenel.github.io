@@ -294,9 +294,7 @@ title: Rules Reference
   h3 Food &amp; Water
   h5 Food
   p
-    | A character who goes for 3 + Con modifier days without eating 1 lb. of food suffers one level of
-    span.emph<> exhaustion
-    | at the end of each day beyond that limit. A normal day of eating resets this counter to 0.
+    | A character who goes for 3 + Con modifier days without eating 1 lb. of food suffers one level of exhaustion at the end of each day beyond that limit. A normal day of eating resets this counter to 0.
   h5 Water
   p
     | A character needs 1 gallon of water per day, or 2 gallons in hot weather. A character who doesn't get enough to drink suffers a level of exhaustion at the ed of the day, or two levels of exhaustion if they are already exhausted. A character who drinks half the required amount can avoid this by succeeding on a DC 15 Con save.
@@ -340,6 +338,45 @@ title: Rules Reference
     | A 10&times;10&times;5 ft. area of razorvine has AC 11, 25 hp, and immunity to bludgeoning, piercing, and psychic damage. When a creature comes into contact with razorvine for the first time on a turn, it must succeed on a DC 10 Dex save or take 5 (1d10) slashing damage.
 
 .page.columns.tall
+  h3 Tension Pool
+  p
+    | The tension pool is a pool of up to 6d6, which is used both for tracking time and generating consequences and complications. The tension pool allows the following actions:
+  p
+    span.subhead> Add a Die.
+    | Add a d6 to the pool. If the pool reaches 6d6, immediately
+    span.emph< roll the pool
+    |, then
+    span.emph< clear the pool
+    |.
+  p
+    span.subhead> Roll the Pool.
+    | Roll all the dice in the pool, then return them to the pool. If the pool is empty, roll 1d6, but do not add it to the pool. If any of the dice shows a 1, a
+    span.emph<> complication
+    | arises.
+  p
+    span.subhead> Roll a Full Pool.
+    | Roll 6d6, but do not change the state of the pool. If any of the dice shows a 1, a
+    span.emph<> complication
+    | arises.
+  p
+    span.subhead> Clear the Pool.
+    | Remove all dice from the pool.
+
+  h4 Tracking Time
+  p
+    | The tension pool can be used to track time on an arbitrary scale. Select a unit of time &mdash; 10 minutes or 4 hours work well for dungeon exploration and wilderness exploration, respectively. Whenever one unit of time passes,
+    span.emph<> add a die
+    | to the pool. If the party does something reckless,
+    span.emph<> roll the pool
+    | to check for complications. You may do both actions, when the party does something reckless that also takes a unit of time.
+  p
+    | If the party passes a larger chunk of time (in a short rest, for example), you may choose to
+    span.emph<> roll a full pool
+    | to check for complications without clearing the pool, so that tension remains at the same level as before.
+  P
+    | Never clear the pool except as a result of adding a die.
+
+.page.columns.tall
   h3 Concealment
   p
     | Creatures in a
@@ -353,7 +390,7 @@ title: Rules Reference
     | blocks vision. Creatures in a heavily obscured area are
     span.emph< blinded
     |. Examples: darkness, opaque fog, dense foliage.
-  table
+  table.group
     caption Light and Vision
     thead
       tr
