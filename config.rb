@@ -20,7 +20,7 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 
 # With alternative layout
-page '/worksheets/*', layout: 'worksheet'
+# page '/worksheets/*', layout: 'worksheet'
 
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/

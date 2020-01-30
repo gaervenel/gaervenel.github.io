@@ -1,25 +1,86 @@
 @import '5e_fonts';
+@import 'flex';
+@import 'columns';
 
-$grey: #999;
-$light-grey: #ddd;
-$dark-grey: #777;
+$bg: #ffd862;
+$bg-light: #ffe69d;
+$bg-dark: #ffce3b;
+$heading: #b18400;
 $black: #111;
 
 * {
     box-sizing: border-box;
 }
 
-body {
-  color: $black;
-  margin: auto;
-  padding: 1em;
-  font-size: 18px;
-  font-family: 'Bookinsanity', serif;
-  max-width: 980px;
+@media screen {
+    body {
+        color: $black;
+        margin: auto;
+        padding: 1em;
+        font-size: 18px;
+        font-family: 'Bookinsanity', serif;
+        max-width: 980px;
+    }
+}
+
+@media screen {
+    // .divider is a divider for sections in a long scrolling
+    // doc where "chapter" breaks are non-obvious. Useful especially for columns.
+    .divider {
+        width: 0;
+        height: 0;
+        border: 180px solid transparent;
+        border-bottom: 3px solid $bg;
+        position: relative;
+        top: -150px;
+        margin: auto;
+        margin-bottom: -120px;
+    }
+
+    .divider:after {
+        position: absolute;
+        left: -180px;
+        top: 3px;
+        width: 0;
+        height: 0;
+        border: 180px solid transparent;
+        border-top: 3px solid $bg;
+        content: '';
+    }
+}
+
+@media print {
+    body {
+        color: $black;
+        margin: 0;
+        font-size: 18px;
+        font-family: 'Bookinsanity', serif;
+        width: 8.5in;
+    }
+
+    @page {
+        margin: 0.75in;
+    }
+
+    @page:left {
+        margin-right: 3cm;
+    }
+
+    @page:right {
+        margin-left: 3cm;
+    }
+
+    section {
+        page-break-before: always;
+    }
+
+    .divider {
+        display: none;
+    }
 }
 
 h2, h3, h4, h5 {
-    color: $dark-grey;
+    color: $heading;
     font-family: 'Mr Eaves Small Caps', serif;
     font-variant: small-caps;
 }
@@ -32,7 +93,7 @@ h2 {
 
 h2 + p::first-letter {
     font-family: 'Solbera Imitation', serif;
-    color: $dark-grey;
+    color: $heading;
     float: left;
     font-size: 6em;
     line-height: 0.8;
@@ -54,7 +115,7 @@ h3 {
 
 h4 {
     font-size: 32px;
-    border-bottom: 2px solid $dark-grey;
+    border-bottom: 2px solid $heading;
     margin-top: 1rem;
     margin-bottom: 2px;
 }
@@ -63,6 +124,14 @@ h5 {
     font-size: 24px;
     margin-top: 1rem;
     margin-bottom: 2px;
+}
+
+h3 + .group > h5, h3 + h5 {
+    margin-top: 0;
+}
+
+section > h2:first-child, section > h3:first-child, section > h4:first-child {
+    margin-top: 0;
 }
 
 p {
@@ -80,10 +149,17 @@ ul.simple {
     white-space: nowrap;
 }
 
+ul {
+    margin: 0;
+    padding-left: 1.2em;
+}
+
 table {
     margin: 1em 0;
     border-collapse: collapse;
     font-family: 'Scaly Sans', sans-serif;
+    page-break-inside: avoid;
+    min-width: 50%;
     caption {
         font-family: 'Scaly Sans Caps Bold', sans-serif;
         font-weight: bold;
@@ -102,12 +178,12 @@ table {
     // If we only have one tbody, then we'll want to stripe the rows
     tbody:only-of-type {
         tr:nth-child(even) {
-            background-color: $light-grey;
+            background-color: $bg-light;
         }
     }
     // If we have more than one tbody, then let's stripe them instead
     tbody:nth-child(even) {
-        background-color: $light-grey;
+        background-color: $bg-light;
     }
     .spell, .magic, .reference, .elvish {
         font-family: 'Scaly Sans Italic', sans-serif;
@@ -124,6 +200,87 @@ table {
 // extra space.
 table + h3, table + h4 {
     margin-top: 0;
+}
+
+// Usage:
+// aside
+//   .border.top
+//   .content
+//      .title
+//      p
+//   .border.bottom
+aside {
+    font-family: 'Scaly Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+
+    float: right;
+    margin: calc(1em + 16px) 0;
+
+    .title {
+        font-family: 'Scaly Sans Caps Bold', sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        font-variant: small-caps;
+        margin-top: 0;
+    }
+
+    .content {
+        padding: 5px 10px;
+        background-color: $bg-light;
+        box-shadow: 1px 4px 14px #888;
+        p {
+            line-height: 1.2;
+        }
+    }
+
+    .border {
+        width: 100%;
+    }
+    .top:before {
+        position: absolute;
+        top: -12px;
+        left: 0;
+        border-top: 11px solid transparent;
+        border-right: 24px solid black;
+        border-bottom: 1px solid black;
+        content: '';
+    }
+    .top:after {
+        position: absolute;
+        top: -12px;
+        right: 0;
+        border-top: 11px solid transparent;
+        border-left: 24px solid black;
+        border-bottom: 1px solid black;
+        content: '';
+    }
+    .top {
+        position: relative;
+        border-bottom: 3px solid black;
+    }
+    .bottom:before {
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        border-top: 1px solid black;
+        border-right: 24px solid black;
+        border-bottom: 11px solid transparent;
+        content: '';
+    }
+    .bottom:after {
+        position: absolute;
+        bottom: -12px;
+        right: 1px;
+        border-top: 1px solid black;
+        border-left: 24px solid black;
+        border-bottom: 11px solid transparent;
+        content: '';
+    }
+    .bottom {
+        position: relative;
+        border-top: 3px solid black;
+    }
 }
 
 .subhead {
@@ -150,16 +307,16 @@ table + h3, table + h4 {
 
 .read-aloud {
     position: relative;
-    background-color: $light-grey;
+    background-color: $bg-light;
     margin: 0.8rem 3px;
     padding: 0.8rem;
-    border-left: 3px solid $dark-grey;
-    border-right: 3px solid $dark-grey;
+    border-left: 3px solid $bg-dark;
+    border-right: 3px solid $bg-dark;
     .circle {
         position: absolute;
         height: 6px;
         width: 6px;
-        background-color: $dark-grey;
+        background-color: $bg-dark;
         border-radius: 50%;
         z-index: 8;
     }
@@ -180,6 +337,22 @@ table + h3, table + h4 {
 .stat-block {
 }
 
+.bg {
+    background-color: $bg;
+}
+
+.bg.light {
+    background-color: $bg-light;
+}
+
+.bg.dark {
+    background-color: $bg-dark;
+}
+
+.small {
+    font-size: 14px;
+}
+
 .emph, .strong, .b {
     font-weight: bolder;
 }
@@ -187,6 +360,16 @@ table + h3, table + h4 {
 .spell, .magic, .reference, .elvish, .i {
     font-family: 'Bookinsanity Italic', serif;
     font-style: italic;
+}
+
+.box {
+    border-radius: 3px;
+    border: 1px solid $bg-dark;
+    padding: 3px;
+}
+
+.pull-up {
+    margin-top: 0;
 }
 
 .group {

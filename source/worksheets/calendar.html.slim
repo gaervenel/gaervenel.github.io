@@ -2,12 +2,12 @@
 title: Calendar Worksheet
 ---
 - (6..13).each do |month|
-  .page.tall
-    h4.pull-up Year of Falling Snow, Month #{month}
+  section
+    h4 Year of Falling Snow, Month #{month}
     - (1..10).each do |day|
       h5.pull-up
         | Day #{(month - 1) * 10 + day} #{solstice?(month, day) ? '(Solstice)' : ''}#{equinox?(month, day) ? ' (Equinox)' : ''}
-      .day.flex.sixths
+      .day.flex
         - %w(Dawnday Eclipse Eventide Nightfel Lens Overnight).each do |period|
-          div class="#{period} box"
+          div class="#{light(period)} box sixth" style="min-height: 2.2cm"
             .b.small="#{period}#{rest?(day, period) ? '*' : ''}"

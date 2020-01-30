@@ -1,0 +1,15 @@
+.columns {
+    @media screen and (min-width: 720px) {
+        columns: 2 auto;
+        .span-all {
+            column-span: all;
+        }
+    }
+
+    @media print {
+        columns: 2 auto;
+        .span-all {
+            column-span: all;
+        }
+    }
+}
