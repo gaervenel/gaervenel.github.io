@@ -1,0 +1,386 @@
+---
+title: Rules Reference
+---
+.page.columns.tall
+  h3.span-all Conditions
+  .group
+    h5 Blinded
+    ul.small
+      li
+        | Can't see; auto-fail
+        span.emph<> ability checks
+        | using sight.
+      li
+        | Your
+        span.emph<> attack rolls
+        | have
+        span.emph< disadvantage
+        |.
+      li
+        span.emph> Attack rolls
+        | against you have
+        span.emph< advantage
+        |.
+  .group
+    h5 Charmed
+    ul.small
+      li
+        | Can't attack the charmer or target them with harmful.small magic or abilities.
+      li
+        | Charmer has
+        span.emph<> advantage
+        | on social
+        span.emph<> ability checks
+        | to influence you.
+  .group
+    h5 Deafened
+    ul.small
+      li
+        | Can't hear; auto-fail
+        span.emph<> ability checks
+        | using hearing.
+  .group
+    h5 Frightened
+    ul.small
+      li
+        span.emph> Disadvantage
+        | on
+        span.emph<> ability checks
+        | and
+        span.emph<> attack rolls
+        | if you can see the source of your fear.
+      li
+        | Can't willingly move closer to the source of your fear.
+  .group
+    h5 Grappled
+    ul.small
+      li
+        | Your speed is 0 and you can't benefit from any bonus to speed.
+      li
+        | Ends if grappler is incapacitated.
+      li
+        | Ends if you are removed from the reach of the grappler.
+  .group
+    h5 Incapacitated
+    ul.small
+      li
+        | Can't take actions or reactions.
+  .group
+    h5 Invisible
+    ul.small
+      li
+        | Can't be seen without magic or special senses. You are heavily obscured for the purpose of hiding. Your location may still be detected.
+      li
+        span.emph> Attack rolls
+        | against you have
+        span.emph< disadvantage
+        |.
+      li
+        | Your
+        span.emph<> attack rolls
+        | have
+        span.emph< advantage
+        |.
+  .group
+    h5 Paralyzed
+    ul.small
+      li
+        span.emph Incapacitated
+        |; can't move or speak.
+      li
+        | Auto-fail Str and Dex
+        span.emph< saving throws
+        |.
+      li
+        span.emph> Attack rolls
+        | against you have
+        span.emph< advantage
+        |.
+      li
+        | Any attack that hits you is an automatic critical if the attacker is within 5 feet.
+  .group
+    h5 Petrified
+    ul.small
+      li
+        | Transformed into a solid, inanimate substance. Weight increases 10x, and you don't age.
+      li
+        span.emph Incapacitated
+        |; can't move or speak.
+      li
+        | Unaware of your surroundings.
+      li
+        | Auto-fail Str and Dex
+        span.emph< saving throws
+        |.
+      li
+        span.emph> Attack rolls
+        | against you have
+        span.emph< advantage
+        |.
+      li
+        span.emph> Resistance
+        | to all damage.
+      li
+        | Immune to poison and disease. Current effects are suspended, not cured.
+  .group
+    h5 Poisoned
+    ul.small
+      li
+        span.emph> Disadvantage
+        | on
+        span.emph<> attack rolls
+        | and
+        span.emph< ability checks
+        |.
+  .group
+    h5 Prone
+    ul.small
+      li
+        | Can only crawl or stand up as movement.
+      li
+        | Your
+        span.emph<> attack rolls
+        | have
+        span.emph< disadvantage
+        |.
+      li
+        span.emph> Attack rolls
+        | against you have
+        span.emph<> advantage
+        | if the attacker is within 5 feet,
+        span.emph<> disadvantage
+        | otherwise.
+  .group
+    h5 Restrained
+    ul.small
+      li
+        | Your speed is 0 and you can't benefit from any bonus to speed.
+      li
+        | Your
+        span.emph<> attack rolls
+        | have
+        span.emph< disadvantage
+        |.
+      li
+        span.emph> Attack rolls
+        | against you have
+        span.emph< advantage
+        |.
+      li
+        span.emph> Disadvantage
+        | on Dex
+        span.emph< saving throws
+        |.
+  .group
+    h5 Stunned
+    ul.small
+      li
+        span.emph Incapacitated
+        |; can't move; speak only falteringly.
+      li
+        | Auto-fail Str and Dex
+        span.emph< saving throws
+        |.
+      li
+        span.emph> Attack rolls
+        | against you have
+        span.emph< advantage
+        |.
+  .group
+    h5 Unconscious
+    ul.small
+      li
+        span.emph Incapacitated
+        |; can't move or speak.
+      li
+        | Unaware of your surroundings.
+      li
+        | You drop what you're holding and fall
+        span.emph< prone
+        |.
+      li
+        | Auto-fail Str and Dex
+        span.emph< saving throws
+        |.
+      li
+        span.emph> Attack rolls
+        | against you have
+        span.emph< advantage
+        |.
+      li
+        | Any attack that hits you is an automatic critical if the attacker is within 5 feet.
+
+.page.columns.tall
+  h3 Movement
+  p
+    | One travel period is
+    span.emph< 4 hours
+    |. A party can normally travel 3 periods in a day, after which they need to rest overnight or risk exhaustion.
+  table
+    caption Travel Distance per Period
+    thead
+      tr
+        th Pace
+        th Distance
+        th Effect
+    tbody
+      tr
+        td Fast
+        td 10 miles
+        td Disadvantage on Wisdom (Perception)
+      tr
+        td Normal
+        td 8 miles
+        td &mdash;
+      tr
+        td Slow
+        td 6 miles
+        td Can stealth
+  h5 Difficult Terrain
+  p
+    | Dense forests, deep swamps, steep mountains, ice-covered ground, or other difficult terrain halves distance traveled.
+  h5 Forced March
+  p
+    | The party can continue traveling after 3 consecutive periods, but they must make a DC 10 Con save or suffer a level of exhaustion. Each additional period increases the save DC by 5.
+
+  h5 Climbing, Swimming, Crawling
+  p
+    | Climbing or Swimming takes twice as much movement as walking unless a creature has a climb or swim speed.
+  p
+    | Crawling takes twice as much movement as walking.
+  h5 Jumping
+  p
+    span.emph> High jump
+    | 3 + Str mod ft.;
+    span.emph<> long jump
+    | Str score ft. &#xbd; distance without 10 ft. running start.
+  p
+    | May require DC 10 Dex save to land in difficult terrain without falling prone.
+  h5 Standing
+  p
+    | Costs &#xbd; speed to stand up from prone.
+  h5 Squeezing
+  p
+    | Squeezing through a small space costs double movement, you have disadvantage on Dex saves, and attack rolls against you have advantage.
+
+  h3 Exhaustion
+  p Exhaustion is measured in six levels. The effects are cumulative. Finishing a long rest reduces a creature's exhaustion level by 1, provided that the creature has also ingested some food and drink.
+  table
+    caption Exhaustion Effects
+    thead
+      tr
+        th Level
+        th Effect
+    tbody
+      tr
+        td 1
+        td Disadvantage on ability checks
+      tr
+        td 2
+        td Speed halved
+      tr
+        td 3
+        td Disadvantage on attack rolls and saving throws
+      tr
+        td 4
+        td Hit point maximum halved
+      tr
+        td 5
+        td Speed reduced to 0
+      tr
+        td 6
+        td Death
+
+  h3 Food &amp; Water
+  h5 Food
+  p
+    | A character who goes for 3 + Con modifier days without eating 1 lb. of food suffers one level of
+    span.emph<> exhaustion
+    | at the end of each day beyond that limit. A normal day of eating resets this counter to 0.
+  h5 Water
+  p
+    | A character needs 1 gallon of water per day, or 2 gallons in hot weather. A character who doesn't get enough to drink suffers a level of exhaustion at the ed of the day, or two levels of exhaustion if they are already exhausted. A character who drinks half the required amount can avoid this by succeeding on a DC 15 Con save.
+
+.page.columns.tall
+  h3.span-all Environment
+  h5 Suffocation
+  p
+    | A creature can hold its breath for 1 + Con modifier minutes (min. 30s). After that, a creature can survive without breathing for Con modifier rounds (min. 1). At the end of its next turn after that, it drops to 0 hp.
+  h5 Extreme Cold
+  p
+    | Below 0&#176;F, a creature must make a DC 10 Con save each hour or suffer 1 level of exhaustion. Creatures with cold resistance or immunity automatically succeed, as do creatures in cold weather gear or those naturally adapted to cold climates.
+  h5 Frigid Water
+  p
+    | After Con score minutes immersed in frigid water, a character must succeed on a DC 10 Con save every additional minute or gain 1 level of exhaustion. Creatures with cold resistance or immunity automatically succeed, as do those naturally adapted to cold water.
+  h5 Extreme Heat
+  p
+    | Above 100&#176;F, a creature without drinkable water must make a Con save  each hour or suffer 1 level of exhaustion. The DC starts at 5 and increases by 1 each hour. Creatures in medium or heavy armor or heavy clothing have disadvantage on the save. Creatures with fire resistance or immunity automatically succeed, as do those naturally adapted to hot climates.
+  h5 Strong Wind
+  p
+    | Imposes disadvantage on ranged weapon attacks and Wisdom (Perception) checks using hearing. Extinguishes open flames and disperses fog. A flying creature in a strong wind must land or fall at the end of its turn. Dust or sand in a strong wind also lightly obscures the area.
+  h5 Heavy Precipitation
+  p
+    | Lightly obscures the area. Imposes disadvantage on Wisdom (Perception) checks using hearing. Extinguishes open flames.
+  h5 High Altitude
+  p
+    | Traveling at altitudes above 10,000 ft. halves the distance a character can travel without exhaustion. Spending 30 days at this altitude acclimates a character and removes this penalty, but only up to 20,000 ft. unless they are native to that altitude.
+  h5 Slippery Ice
+  p
+    | Slippery ice is difficult terrain. When a creature moves onto slippery ice for the first time on a turn, it must succeed on a DC 10 Dexterity (Acrobatics) check or fall prone.
+  h5 Thin Ice
+  p
+    | Thin ice breaks in a 10-ft. area after 3d10 &times; 10 lbs.
+  h5 Desecrated Ground
+  p
+    | Undead on desecrated ground have advantage on all saving throws. A vial of holy water can purify a 10-ft. area, and the
+    span.spell<> hallow
+    | spell purifies desecrated ground.
+  h5 Razorvine
+  p
+    | A 10&times;10&times;5 ft. area of razorvine has AC 11, 25 hp, and immunity to bludgeoning, piercing, and psychic damage. When a creature comes into contact with razorvine for the first time on a turn, it must succeed on a DC 10 Dex save or take 5 (1d10) slashing damage.
+
+.page.columns.tall
+  h3 Concealment
+  p
+    | Creatures in a
+    span.emph<> lightly obscured
+    | area have
+    span.emph<> disadvantage
+    | on Wisdom (Perception) checks using sight. Examples: dim light, patchy fog, moderate foliage.
+  p
+    | Any area that is
+    span.emph<> heavily obscured
+    | blocks vision. Creatures in a heavily obscured area are
+    span.emph< blinded
+    |. Examples: darkness, opaque fog, dense foliage.
+  table
+    caption Light and Vision
+    thead
+      tr
+        th Light
+        th Effect
+    tbody
+      tr
+        td Bright
+        td &mdash;
+      tr
+        td Dim
+        td lightly obscured
+      tr
+        td Darkness
+        td heavily obscured
+
+  h3 Cover
+  p
+    | A creature with
+    span.emph<> half cover
+    | has a +2 bonus to AC and Dex saves. Examples: low wall, furniture, another creature, narrow tree trunk.
+  p
+    | A creature with
+    span.emph<> three-quarters cover
+    | has a +5 bonus to AC and Dex saves. Examples: portcullis, arrow slit, thick tree trunk.
+  p
+    | A creature with
+    span.emph<> full cover
+    | can't be directly targeted by spells or attacks.
+

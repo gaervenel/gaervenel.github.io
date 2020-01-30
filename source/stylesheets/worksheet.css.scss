@@ -1,8 +1,8 @@
 @import '5e_fonts';
 
-$grey: #aaa;
-$light-grey: #eee;
-$dark-grey: #888;
+$grey: #bbb;
+$light-grey: #ddd;
+$dark-grey: #999;
 $black: #000;
 
 * {
@@ -12,7 +12,8 @@ $black: #000;
 body {
   color: $black;
   margin: 0;
-  font-size: 18px;
+  padding: 0;
+  font-size: 16px;
   font-family: 'Bookinsanity', serif;
   width: 8.5in;
 }
@@ -25,6 +26,9 @@ body {
     page-break-inside: avoid;
     page-break-after: always;
     overflow: hidden;
+    h2:first-child, h3:first-child {
+        margin-top: 0;
+    }
 }
 
 .page:nth-of-type(even) {
@@ -48,6 +52,13 @@ body {
 .flex.sixths {
     > div {
         width: calc(100% / 6 - 0.1cm);
+    }
+}
+
+.columns {
+    columns: 2 auto;
+    .span-all {
+        column-span: all;
     }
 }
 
@@ -100,21 +111,25 @@ h2 + p::first-line {
 
 h3 {
     font-size: 40px;
-    margin-top: 1rem;
+    margin-top: 0.4cm;
     margin-bottom: 6px;
 }
 
 h4 {
     font-size: 32px;
     border-bottom: 2px solid $dark-grey;
-    margin-top: 1rem;
+    margin-top: 0.4cm;
     margin-bottom: 2px;
 }
 
 h5 {
     font-size: 24px;
-    margin-top: 1rem;
+    margin-top: 0.4cm;
     margin-bottom: 2px;
+}
+
+h3 + .group > h5, h3 + h5 {
+    margin-top: 0;
 }
 
 p {
@@ -132,7 +147,13 @@ ul.simple {
     white-space: nowrap;
 }
 
+ul {
+    margin: 0;
+    padding-left: 1.2em;
+}
+
 table {
+    width: 100%;
     margin: 1em 0;
     border-collapse: collapse;
     font-family: 'Scaly Sans', sans-serif;
@@ -176,6 +197,87 @@ table {
 // extra space.
 table + h3, table + h4 {
     margin-top: 0;
+}
+
+// Usage:
+// aside
+//   .border.top
+//   .content
+//      .title
+//      p
+//   .border.bottom
+aside {
+    font-family: 'Scaly Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+
+    float: right;
+    margin: calc(1em + 16px) 0;
+
+    .title {
+        font-family: 'Scaly Sans Caps Bold', sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        font-variant: small-caps;
+        margin-top: 0;
+    }
+
+    .content {
+        padding: 5px 10px;
+        background-color: $light-grey;
+        box-shadow: 1px 4px 14px #888;
+        p {
+            line-height: 1.2;
+        }
+    }
+
+    .border {
+        width: 100%;
+    }
+    .top:before {
+        position: absolute;
+        top: -12px;
+        left: 0;
+        border-top: 11px solid transparent;
+        border-right: 24px solid black;
+        border-bottom: 1px solid black;
+        content: '';
+    }
+    .top:after {
+        position: absolute;
+        top: -12px;
+        right: 0;
+        border-top: 11px solid transparent;
+        border-left: 24px solid black;
+        border-bottom: 1px solid black;
+        content: '';
+    }
+    .top {
+        position: relative;
+        border-bottom: 3px solid black;
+    }
+    .bottom:before {
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        border-top: 1px solid black;
+        border-right: 24px solid black;
+        border-bottom: 11px solid transparent;
+        content: '';
+    }
+    .bottom:after {
+        position: absolute;
+        bottom: -12px;
+        right: 1px;
+        border-top: 1px solid black;
+        border-left: 24px solid black;
+        border-bottom: 11px solid transparent;
+        content: '';
+    }
+    .bottom {
+        position: relative;
+        border-top: 3px solid black;
+    }
 }
 
 .subhead {
@@ -246,5 +348,9 @@ table + h3, table + h4 {
 }
 
 .group {
-    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.new-page {
+    break-before: always;
 }
