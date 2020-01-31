@@ -1,0 +1,54 @@
+div class="stat-block#{' wide' if double}"
+  h5=creature[:name]
+  .type
+    | #{creature[:size_class].capitalize}
+    |  #{creature[:type]}
+    |  #{creature[:keywords] ? "(#{creature[:keywords].join(', ')})" : ''}
+    |, #{creature[:alignment]}
+
+  .bar
+
+  .ac
+    span.b> Armor Class
+    | #{creature[:ac]} (#{creature[:armor].join(', ')})
+  .hp
+    span.b> Hit Points
+    | #{creature[:hp]} (#{creature[:hd]})
+  .speed
+    span.b> Speed
+    = creature[:speed].map { |mode, speed| "#{mode unless mode == 'walk'} #{speed} ft."}.join(', ')
+
+  .bar
+  - if creature[:skills]
+    .skills
+      span.b> Skills
+      = creature[:skills].map { |skill, bonus| "#{skill.capitalize} #{'%+d' % bonus}" }.join(', ')
+  - if creature[:senses]
+    .senses
+      span.b> Senses
+      = creature[:senses].map { |sense, range| "#{sense} #{range} ft." }.join(', ')
+  .languages
+    span.b> Languages
+    = creature[:languages].empty? ? '&mdash;' : creature[:languages].map(&:capitalize).join(', ')
+  .challenge
+    //span.b> Challenge
+    //= creature[:cr]
+
+  .bar
+  .features
+    - creature[:features].each do |title, text|
+      p
+        span.subhead> #{title.capitalize}.
+        = text[0]
+      - text[1..].each do |more|
+        p #{more}
+
+  .actions
+    h6 Actions
+    - creature[:actions].each do |title, action|
+      .action
+        span.subhead> #{title.capitalize}.
+        span.i>
+          - if action[:attack]
+            = [('Melee' if action[:melee]), ('Ranged' if action[:ranged])].compact.join(' or ')
+            |  #{('Weapon' if action[:weapon])} Attack.

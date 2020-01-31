@@ -1,33 +1,51 @@
 .flex {
     display: flex;
     justify-content: space-between;
-    @media print {
-        > .half {
-            width: calc(100% / 2 - 0.1cm);
-        }
-        > .third {
-            width: calc(100% / 3 - 0.1cm);
-        }
-        > .fourth {
-            width: calc(100% / 4 - 0.1cm);
-        }
-        > .sixth {
-            width: calc(100% / 6 - 0.1cm);
-        }
-    }
-    @media screen {
-        > .half {
-            width: calc(100% / 2 - 0.4rem);
-        }
-        > .third {
-            width: calc(100% / 3 - 0.4rem);
-        }
-        > .fourth {
-            width: calc(100% / 4 - 0.4rem);
-        }
-        > .sixth {
-            width: calc(100% / 6 - 0.4rem);
-        }
+}
 
+@media print {
+    .half {
+        width: calc(100% / 2 - 0.1cm);
+    }
+    .third {
+        width: calc(100% / 3 - 0.1cm);
+    }
+    .two-thirds {
+        width: calc(100% / 3 * 2 - 0.1cm);
+    }
+    .fourth {
+        width: calc(100% / 4 - 0.1cm);
+    }
+    .three-fourths {
+        width: calc(100% / 4 * 3 - 0.1cm);
+    }
+    .fifth {
+        width: calc(100% / 5 - 0.1cm);
+    }
+    .sixth {
+        width: calc(100% / 6 - 0.1cm);
+    }
+}
+@media screen {
+    .half {
+        width: calc(100% / 2 - 0.4rem);
+    }
+    .third {
+        width: calc(100% / 3 - 0.4rem);
+    }
+    .two-thirds {
+        width: calc(100% / 3 * 2 - 0.4rem);
+    }
+    .fourth {
+        width: calc(100% / 4 - 0.4rem);
+    }
+    .three-fourths {
+        width: calc(100% / 4 * 3 - 0.4rem);
+    }
+    .fifth {
+        width: calc(100% / 5 - 0.4rem);
+    }
+    .sixth {
+        width: calc(100% / 6 - 0.4rem);
     }
 }

@@ -1,5 +1,17 @@
 ---
 title: Orc Skirmishers
 ---
-.page
-  
+section
+  .flex
+    .initiative-tracker
+      - (-2..27).reverse_each do |i|
+        .initiative="#{i}." if i % 5 == 0
+    .stats
+      .health.flex
+        - (1..5).each do |i|
+          .enemy.fifth.box
+            .head.b Orc ##{i}
+            .label Note:
+            .label HP:
+      = partial('partials/stat_block', locals: { creature: data.creatures.orc_skirmisher, double: false })
+
