@@ -1,16 +1,16 @@
-div class="stat-block#{' wide' if double}"
+div class="stat-block#{' half' unless double}"
   h5=creature[:name]
   .type
     | #{creature[:size_class].capitalize}
     |  #{creature[:type]}
-    |  #{creature[:keywords] ? "(#{creature[:keywords].join(', ')})" : ''}
+    | #{creature[:keywords] ? " (#{creature[:keywords].join(', ')})" : ''}
     |, #{creature[:alignment]}
 
   .bar
 
   .ac
     span.b> Armor Class
-    | #{creature[:ac]} (#{creature[:armor].join(', ')})
+    = creature[:ac].to_s + (creature[:armor] ? " #{creature[:armor].join(', ')}" : '')
   .hp
     span.b> Hit Points
     | #{creature[:hp]} (#{creature[:hd]})
@@ -19,35 +19,63 @@ div class="stat-block#{' wide' if double}"
     = creature[:speed].map { |mode, speed| "#{mode unless mode == 'walk'} #{speed} ft."}.join(', ')
 
   .bar
+
   - if creature[:skills]
-    .skills
+    .skills.hang
       span.b> Skills
       = creature[:skills].map { |skill, bonus| "#{skill.capitalize} #{'%+d' % bonus}" }.join(', ')
+      = " #{creature[:append][:skills]}" if creature[:append] && creature[:append][:skills]
+
+  - if creature[:vulnerability]
+    .vulnerability.hang
+      span.b> Damage Vulnerabilities
+      = creature[:vulnerability].join(', ')
+
+  - if creature[:resistance]
+    .resistance.hang
+      span.b> Damage Resistances
+      = creature[:resistance].select { |type| !type.include?(',') }.join(', ')
+      = "; #{creature[:resistance].select { |type| type.include?(',') }.join('; ')}" unless creature[:resistance].select { |type| type.include?(',') }.empty?
+
+  - if creature[:damage_immunity]
+    .damage-immunity.hang
+      span.b> Damage Immunities
+      = creature[:damage_immunity].select { |type| !type.include?(',') }.join(', ')
+      = "; #{creature[:damage_immunity].select { |type| type.include?(',') }.join('; ')}" unless creature[:damage_immunity].select { |type| type.include?(',') }.empty?
+
+  - if creature[:condition_immunity]
+    .condition-immunity.hang
+      span.b> Condition Immunities
+      = creature[:condition_immunity].join(', ')
+
   - if creature[:senses]
-    .senses
+    .senses.hang
       span.b> Senses
       = creature[:senses].map { |sense, range| "#{sense} #{range} ft." }.join(', ')
-  .languages
+
+  .languages.hang
     span.b> Languages
-    = creature[:languages].empty? ? '&mdash;' : creature[:languages].map(&:capitalize).join(', ')
+    = creature[:languages].blank? ? '&mdash;' : creature[:languages].map(&:capitalize).join(', ')
+
   .challenge
     //span.b> Challenge
     //= creature[:cr]
 
   .bar
-  .features
-    - creature[:features].each do |title, text|
-      p
-        span.subhead> #{title.capitalize}.
-        = text[0]
-      - text[1..].each do |more|
-        p #{more}
+  - if creature[:features]
+    .features
+      - creature[:features].each do |title, text|
+        .feature
+          span.subhead> #{title.split(' ').map(&:capitalize).join(' ')}.
+          = text[0]
+        - text[1..].each do |more|
+          p #{more}
 
   .actions
     h6 Actions
     - creature[:actions].each do |title, action|
       .action
-        span.subhead> #{title.capitalize}.
+        span.subhead> #{title.split(' ').map(&:capitalize).join(' ')}.
         span.i>
           - if action[:attack]
             = [('Melee' if action[:melee]), ('Ranged' if action[:ranged])].compact.join(' or ')
@@ -56,5 +84,12 @@ div class="stat-block#{' wide' if double}"
         = [(' reach ' + action[:reach].to_s + ' ft.' if action[:reach]), (' range ' + action[:range].join('/') + ' ft.' if action[:range])].compact.join(' or')
         |, one target.
         span.i<> Hit:
-        | #{action[:damage]} #{action[:damage_type]} damage.
+        | #{action[:damage]} #{action[:damage_type]} damage
+        - if action[:extra]
+          = ', ' + action[:extra][0]
+          - action[:extra][1..].each do |text|
+            p=text
+        - else
+          |.
+ 
 

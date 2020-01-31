@@ -1,0 +1,38 @@
+section.encounter.flex
+  .initiative-tracker
+    - (-2..27).reverse_each do |i|
+      .initiative="#{i}." if i % 5 == 0
+
+  .flex.tall.content
+
+    - if encounter.question
+      .question
+        h5 Question
+        - encounter.question.each do |q|
+          p=q
+
+    - if encounter.motivation
+      .motivation
+        h5 Motivation
+        - encounter.motivation.each do |text|
+          p=text
+
+    - if encounter.battlefield
+      .battlefield
+        h5 Battlefield
+        - encounter.battlefield.each do |text|
+          p=text
+
+    .stats
+      .health
+        - encounter.creatures.each do |id, count|
+          - (1..count).each do |i|
+            .enemy.box
+              .head.b #{data.creatures.send(id)[:name]} ##{i}
+              .label Note:
+              .label HP:
+
+      .flex
+        - encounter.creatures.each do |id, _|
+          = partial('partials/stat_block', locals: { creature: data.creatures.send(id), double: false })
+

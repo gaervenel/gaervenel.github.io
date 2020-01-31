@@ -1,0 +1,37 @@
+name: Dire Wolf Skeleton
+size_class: large
+type: undead
+alignment: lawful evil
+ac: 12
+hp: 34
+hd: 4d10+12
+speed:
+  walk: 50
+ability_scores:
+  str: 17
+  dex: 15
+  con: 17
+  int: 4
+  wis: 8
+  cha: 5
+vulnerability:
+  - bludgeoning
+damage_immunity:
+  - poison
+condition_immunity:
+  - exhaustion
+  - poisoned
+senses:
+  darkvision: 60
+actions:
+  bite:
+    melee: true
+    weapon: true
+    attack: true
+    hit: 5
+    reach: 5
+    targets: 1
+    damage: 2d4+3
+    damage_type: piercing
+    extra:
+      - and the target must succeed on a DC 13 Strength saving throw or be knocked prone.

@@ -1,0 +1,26 @@
+---
+title: Supply Lines Encounters
+
+orc_skirmishers:
+  creatures:
+    orc_skirmisher: 5
+  question:
+    - Will the orcs survive their encounter with the PCs?
+  motivation:
+    - The orcs believe the characters are part of the same raiding party from Suthalion's camp that killed their party and stole the supply wagon. They immediately attack, feeling cornered, but liking the 5-on-5 odds. If the party somehow makes clear they are willing to let them go, the orcs will gladly stop fighting and continue on their way.
+  battlefield:
+    - Orcs appear at the top of a low rise next to a shallow stream about 10 ft. wide. Terrain is relatively flat. Only the stream is difficult terrain.
+
+elven_shrine:
+  creatures:
+    shadow: 2
+    dire_wolf_skeleton: 1
+  question:
+    - Can the PCs escape from the undead with the orb?
+  motivation:
+    - The undead want to destroy life and anyone who disturbs the shrine. But they will not pursue forever.
+  battlefield:
+    - A hidden grotto behind a waterfall, with a broken statue of a female elf in it. The floor is natural and uneven, and slick with water; the whole battlefield is difficult terrain.
+---
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.orc_skirmishers })
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.elven_shrine })

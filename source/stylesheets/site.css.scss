@@ -335,7 +335,6 @@ aside {
 }
 
 .stat-block {
-    width: 50%;
     font-size: 14px;
     padding: 0.4em;
     font-family: 'Scaly Sans', sans-serif;
@@ -358,12 +357,12 @@ aside {
         font-weight: bold;
     }
     .features {
-        margin-top: 0.8rem;
-        margin-right: 0.4rem;
+        .feature {
+            margin-top: 0.8rem;
+        }
     }
     .actions {
         margin-top: 0.8rem;
-        margin-right: 0.4rem;
         h6 {
             font-family: 'Scaly Sans Caps Bold', sans-serif;
             font-weight: bold;
@@ -375,6 +374,9 @@ aside {
             text-align: left;
             margin: 0;
         }
+        p {
+            text-indent: 1em;
+        }
         .action:not(:last-of-type) {
             margin-bottom: 1em;
         }
@@ -385,30 +387,49 @@ aside {
     width: 100%;
 }
 
-.initiative-tracker {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    border-radius: 5px;
-    border: 1px solid $bg-dark;
-    margin-right: 0.8rem;
-    .initiative {
-        line-height: 1.5;
-        height: 2em;
+.encounter {
+    .initiative-tracker {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        border-radius: 5px;
+        border: 1px solid $bg-dark;
+        margin-right: 0.8rem;
+        .initiative {
+            line-height: 1.5;
+            height: 2em;
+        }
+        .initiative:not(:last-child) {
+            border-bottom: 1px dotted $black;
+        }
     }
-    .initiative:not(:last-child) {
-        border-bottom: 1px dotted $black;
-    }
-}
 
-.initiative-tracker + .stats {
-    width: 79%;
-    .head {
-        text-align: center;
-        border-bottom: 1px solid $bg-dark;
+    > div:not(.initiative-tracker) {
+        width: 79%;
     }
-    .health {
-        width: 100%;
+
+    .content > div {
+        margin-bottom: 0.8rem;
+        h5 {
+            margin: 0;
+        }
+    }
+
+    .stats {
+        .head {
+            text-align: center;
+            border-bottom: 1px solid $bg-dark;
+        }
+        .health {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .enemy {
+                min-width: 11rem;
+                margin-right: 0.4rem;
+                margin-bottom: 0.4rem;
+            }
+        }
     }
 }
 
@@ -445,6 +466,11 @@ aside {
 
 .pull-up {
     margin-top: 0;
+}
+
+.hang {
+    text-indent: -1em;
+    padding-left: 1em;
 }
 
 .group {
