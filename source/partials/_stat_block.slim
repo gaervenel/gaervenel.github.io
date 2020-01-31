@@ -52,3 +52,9 @@ div class="stat-block#{' wide' if double}"
           - if action[:attack]
             = [('Melee' if action[:melee]), ('Ranged' if action[:ranged])].compact.join(' or ')
             |  #{('Weapon' if action[:weapon])} Attack.
+        | #{'%+d' % action[:hit]} to hit,
+        = [(' reach ' + action[:reach].to_s + ' ft.' if action[:reach]), (' range ' + action[:range].join('/') + ' ft.' if action[:range])].compact.join(' or')
+        |, one target.
+        span.i<> Hit:
+        | #{action[:damage]} #{action[:damage_type]} damage.
+
