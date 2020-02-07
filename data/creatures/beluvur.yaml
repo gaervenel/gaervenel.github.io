@@ -1,0 +1,52 @@
+name: Beluvur
+size_class: medium
+type: humanoid
+keywords:
+  - tiefling
+alignment: neutral
+ac: 13
+armor:
+  - leather armor
+hp: 13
+hd: 3d8
+speed:
+  walk: 30
+ability_scores:
+  str: 10
+  dex: 14
+  con: 10
+  int: 11
+  wis: 8
+  cha: 13
+skills:
+  perception: 1
+  intimidation: 3
+  stealth: 4
+senses:
+  darkvision: 60
+languages:
+  - common
+  - infernal
+features:
+  hellish_resistance:
+    - Beluvur has resistance to fire damage.
+actions:
+  shortsword:
+    melee: true
+    weapon: true
+    attack: true
+    hit: 4
+    reach: 5
+    targets: 1
+    damage: 1d6+2
+    damage_type: piercing
+  shortbow:
+    melee: false
+    ranged: true
+    weapon: true
+    attack: true
+    hit: 4
+    range: [80, 320]
+    targets: 1
+    damage: 1d6+2
+    damage_type: piercing
