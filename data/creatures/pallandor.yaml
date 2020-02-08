@@ -1,0 +1,52 @@
+name: Pallandor
+size_class: medium
+type: humanoid
+keywords:
+  - elf
+alignment: neutral good
+ac: 14
+armor:
+  - leather armor
+hd: 4d8
+speed:
+  walk: 35
+ability_scores:
+  str: 10
+  dex: 16
+  con: 11
+  int: 10
+  wis: 12
+  cha: 11
+skills:
+  perception: 3
+  survival: 3
+senses:
+  darkvision: 60
+languages:
+  - common
+  - elvish
+features:
+  fey_ancestry:
+    - Pallandor has advantage on saving throws against being charmed, and magic can't put him to sleep.
+actions:
+  dagger:
+    melee: true
+    weapon: true
+    attack: true
+    ranged: true
+    hit: 5
+    reach: 5
+    range: [20, 60]
+    targets: 1
+    damage: 1d4+3
+    damage_type: piercing
+  longbow:
+    melee: false
+    weapon: true
+    attack: true
+    ranged: true
+    hit: 5
+    range: [150, 600]
+    targets: 1
+    damage: 1d8+3
+    damage_type: piercing

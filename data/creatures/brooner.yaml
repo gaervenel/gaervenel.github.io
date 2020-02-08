@@ -1,0 +1,25 @@
+name: Brooner
+size_class: large
+type: beast
+alignment: unaligned
+ac: 10
+hd: 3d10+3
+speed:
+  walk: 40
+ability_scores:
+  str: 18
+  dex: 10
+  con: 12
+  int: 2
+  wis: 11
+  cha: 7
+actions:
+  hooves:
+    melee: true
+    weapon: true
+    attack: true
+    hit: 6
+    reach: 5
+    targets: 1
+    damage: 2d4+4
+    damage_type: bludgeoning

@@ -1,0 +1,43 @@
+name: Belnys Krathtel
+size_class: medium
+type: humanoid
+keywords:
+  - dragonborn
+alignment: chaotic neutal
+ac: 15
+armor:
+  - scale mail
+hp: 39
+hd: 6d8+12
+speed:
+  walk: 30
+ability_scores:
+  str: 16
+  dex: 13
+  con: 14
+  int: 8
+  wis: 12
+  cha: 8
+skills:
+  perception: 3
+  survival: 3
+languages:
+  - common
+  - draconic
+features:
+  cold_resistance:
+    - Belnys has resistance to cold damage.
+  reckless:
+    - At the start of her turn, Belnys can gain advantage on all melee weapon attack rolls during that turn, but attack rolls against her have advantage until the start of her next turn.
+actions:
+  greatsword:
+    melee: true
+    weapon: true
+    attack: true
+    hit: 5
+    reach: 5
+    targets: 1
+    damage: 2d6+5
+    damage_types: slashing
+  cold_breath:
+    text: Belnys exhales cold in a 15-foot cone. Each creature in that area must make a DC 14 Dexterity saving throw, taking 7 (2d6) cold damage on a failed save, or half as much damage on a successful one.

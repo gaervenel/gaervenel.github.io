@@ -1,0 +1,49 @@
+name: Frollo Hoopdriver
+size_class: small
+type: humanoid
+keywords:
+  - halfling
+alignment: neutral good
+ac: 12
+armor:
+  - leather armor
+hd: 3d6+6
+speed:
+  walk: 25
+ability_scores:
+  str: 9
+  dex: 13
+  con: 15
+  int: 11
+  wis: 10
+  cha: 12
+resistance:
+  - poison
+languages:
+  - common
+  - halfling
+features:
+  stout_resilience:
+    - Frollo has advantage on saving throws against poison.
+  brave:
+    - Frollo has advantage on saving throws against being frightened.
+actions:
+  shortsword:
+    melee: true
+    weapon: true
+    attack: true
+    hit: 3
+    reach: 5
+    targets: 1
+    damage: 1d6+1
+    damage_type: piercing
+  sling:
+    melee: false
+    ranged: true
+    weapon: true
+    attack: true
+    hit: 3
+    range: [30, 120]
+    targets: 1
+    damage: 1d4+1
+    damage_type: bludgeoning

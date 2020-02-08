@@ -358,8 +358,21 @@ aside {
         height: 0;
         border-top: 3px solid transparent;
         border-bottom: 3px solid transparent;
-        border-left: 22.8rem solid $bg-dark;
+        border-left: 32em solid $bg-dark;
         margin: 3px 0;
+    }
+    .bar.narrow {
+        border-left: 32em solid $bg-dark;
+    }
+    .ability_scores {
+        text-align: center;
+        .ability {
+            font-weight: bolder;
+            width: 15%;
+        }
+        .score {
+            font-weight: normal;
+        }
     }
     .type, .spell, .magic, .i {
         font-family: 'Scaly Sans Italic', sans-serif;
@@ -395,10 +408,6 @@ aside {
             margin-bottom: 1em;
         }
     }
-}
-
-.stat-block.wide {
-    width: 100%;
 }
 
 .encounter {
@@ -445,6 +454,12 @@ aside {
             }
         }
     }
+
+    .stat-block {
+        .bar {
+            border-left: 26em solid $bg-dark;
+        }
+    }
 }
 
 .bg {
@@ -480,6 +495,10 @@ aside {
 
 .pull-up {
     margin-top: 0;
+}
+
+.space-above {
+    margin-top: 1em;
 }
 
 .hang {

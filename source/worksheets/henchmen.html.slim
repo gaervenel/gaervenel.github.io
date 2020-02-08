@@ -1,0 +1,39 @@
+---
+title: Henchmen
+public: false
+---
+section.flex
+  = partial('partials/stat_block', locals: { creature: data.creatures.pallandor, double: false })
+  .description(style="width: 45%; margin-top: 1rem;")
+    span.emph> Pallandor
+    | is an elf and an experienced hunter from Druinnagol, who owes no particular allegiance to Rathbaran but who nevertheless has volunteered his bow to help defend the north from orcish incursions. He is fascinated by magic, though he lacks any magical ability of his own.
+
+
+.flex.space-above
+  = partial('partials/stat_block', locals: { creature: data.creatures.beluvur, double: false })
+  .description(style="width: 45%; margin-top: 1rem;")
+    span.emph> Beluvur
+    | is a male, red-skinned tiefling with a single wide, curved horn protruding from his forehead. He has stringy, thin black hair and a seriously recessed hairline. He has been shunned by the majority of the militia.
+
+
+.flex.space-above
+  = partial('partials/stat_block', locals: { creature: data.creatures.brooner, double: false })
+  .description(style="width: 45%; margin-top: 1rem;")
+    span.emph> Brooner
+    | is a horse. He's very patient. Not a warhorse, but sufficiently used to battle not to be immediately spooked.
+
+
+section.flex
+  = partial('partials/stat_block', locals: { creature: data.creatures.frollo, double: false })
+  .description(style="width: 45%; margin-top: 1rem;")
+    span.emph> Frollo
+    | is a rotund male halfling with curly dark hair. He likes to talk at length about the food he misses from home. Not much of a warrior, Frollo nevertheless has shown both courage and a willingness to follow orders, at least in training.
+
+.flex.space-above
+  = partial('partials/stat_block', locals: { creature: data.creatures.belnys, double: false })
+  .description(style="width: 45%; margin-top: 1rem;")
+    span.emph> Belnys
+    | is a white-scaled female dragonborn of somewhat short stature (only 6'2"). She speaks rarely and only reluctantly follows orders. She has a reputation of being a bit of a brute and a loner.
+
+
+

@@ -5,7 +5,8 @@ module TextHelpers
   # Capitalize each word, excluding IGNORE_TITLE_CASE words unless it's the
   # first word
   def titleize str
-    str.split(' ')
+    str.gsub('_', ' ')
+      .split(' ')
       .each_with_index
       .map { |w, i| (i > 0 && IGNORE_TITLE_CASE.include?(w)) ? w : w.capitalize }
       .join(' ')
