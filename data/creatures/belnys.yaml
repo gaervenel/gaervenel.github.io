@@ -40,4 +40,5 @@ actions:
     damage: 2d6+5
     damage_types: slashing
   cold_breath:
+    recharge: Recharges after a Short or Long Rest
     text: Belnys exhales cold in a 15-foot cone. Each creature in that area must make a DC 14 Dexterity saving throw, taking 7 (2d6) cold damage on a failed save, or half as much damage on a successful one.

@@ -1,0 +1,52 @@
+name: Fire Spirit (Weakened)
+size_class: medium
+type: elemental
+alignment: neutral
+ac: 13
+hd: 6d8+12
+speed:
+  walk: 40
+ability_scores:
+  str: 10
+  dex: 16
+  con: 15
+  int: 6
+  wis: 10
+  cha: 6
+resistance:
+  - bludgeoning, piercing, and slashing from nonmagical weapons
+damage_immunity:
+  - fire
+  - poison
+condition_immunity:
+  - exhaustion
+  - grappled
+  - paralyzed
+  - petrified
+  - poisoned
+  - prone
+  - restrained
+  - unconscious
+senses:
+  darkvision: 60
+languages:
+  - ignan
+features:
+  fire_form:
+    - The fire spirit can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the spirit or hits it with a melee attack while within 5 feet of it takes 5 (1d10) fire damage. In addition, the spirit can enter a hostile creature's space on a turn; that creature takes 5 (1d10) fire damage and catches fire. Until someone takes an action to douse the fire, the creature takes 5 (1d10) fire damage at the start of each of its turns.
+  illumination:
+    - The spirit sheds bright light in a 20-foot radius and dim light in an additional 20 feet.
+  water_susceptibility:
+    - For every 5 feet the spirit moves in water, or for every gallon of water splashed on it, it takes 1 cold damage.
+actions:
+  touch:
+    melee: true
+    weapon: true
+    attack: true
+    hit: 5
+    reach: 5
+    targets: 1
+    damage: 2d4+3
+    damage_type: fire
+    extra:
+      - and if the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 5 (1d10) fire damage at the start of each of its turns.
