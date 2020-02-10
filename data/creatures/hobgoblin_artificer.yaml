@@ -1,0 +1,55 @@
+name: Hobgoblin Artificer
+tier: journeyman
+number: party
+size_class: medium
+type: humanoid
+keywords:
+  - goblinoid
+alignment: lawful evil
+ac: 16
+armor:
+  - scale mail
+  - shield
+hd: 6d8+12
+speed:
+  walk: 30
+ability_scores:
+  str: 11
+  dex: 10
+  con: 14
+  int: 15
+  wis: 12
+  cha: 10
+skills:
+  arcana: +5
+senses:
+  darkvision: 60
+languages:
+  - goblin
+features:
+  disciplined:
+    - Hobgoblins have advantage on saving throws against being frightened or charmed as long as they are within 60 feet of a hobgoblin ally they can see and hear who isn't incapacitated.
+spellcasting:
+  level: 5
+  ability: int
+  dc: 13
+  attack: 5
+  intro: The hobgoblin artificer is a 5th-level spellcaster.
+  outro: "It has the following artificer spells prepared:"
+  slots: [ 0, 4, 2 ]
+  spells:
+    - [ fire bolt, mending ]
+    - [ catapult, expeditious retreat, grease ]
+    - [ heat metal ]
+actions:
+  light_hammer:
+    melee: true
+    weapon: true
+    ranged: true
+    attack: true
+    hit: 5
+    reach: 5
+    range: [20, 60]
+    targets: 1
+    damage: 1d4
+    damage_type: bludgeoning

@@ -1,0 +1,46 @@
+name: Hobgoblin Worg Master
+tier: journeyman
+number: party
+size_class: medium
+type: humanoid
+keywords:
+  - goblinoid
+alignment: lawful evil
+ac: 14
+armor:
+  - hide armor
+hd: 6d8+6
+speed:
+  walk: 30
+ability_scores:
+  str: 13
+  dex: 14
+  con: 13
+  int: 11
+  wis: 13
+  cha: 10
+skills:
+  animal_handling: 3
+  intimidation: 2
+senses:
+  darkvision: 60
+languages:
+  - goblin
+  - worg
+features:
+  disciplined:
+    - Hobgoblins have advantage on saving throws against being frightened or charmed as long as they are within 60 feet of a hobgoblin ally they can see and hear who isn't incapacitated.
+actions:
+  multiattack:
+    text: The worg master makes two whip attacks.
+  whip:
+    melee: true
+    weapon: true
+    attack: true
+    hit: 4
+    reach: 10
+    targets: 1
+    damage: 1d4+2
+    damage_type: slashing
+  command:
+    text: The worg master commands a worg within 60 ft. to attack. The worg can use its reaction to make a bite attack against a target. The worg may move up to 5 ft. prior to making the attack.

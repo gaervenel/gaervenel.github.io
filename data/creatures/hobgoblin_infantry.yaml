@@ -1,0 +1,38 @@
+name: Hobgoblin Infantry
+tier: apprentice
+number: party
+size_class: medium
+type: humanoid
+keywords:
+  - goblinoid
+alignment: lawful evil
+ac: 15
+armor:
+  - scale mail
+hd: 4d8 + 4
+speed:
+  walk: 30
+ability_scores:
+  str: 15
+  dex: 12
+  con: 13
+  int: 10
+  wis: 10
+  cha: 8
+languages:
+  - goblin
+senses:
+  darkvision: 60
+features:
+  disciplined:
+    - Hobgoblins have advantage on saving throws against being frightened or charmed as long as they are within 60 feet of a hobgoblin ally they can see and hear who isn't incapacitated.
+actions:
+  glaive:
+    melee: true
+    weapon: true
+    attack: true
+    hit: 4
+    reach: 10
+    targets: 1
+    damage: 1d10+2
+    damage_type: slashing

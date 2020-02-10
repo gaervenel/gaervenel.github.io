@@ -16,7 +16,8 @@ module RulesHelpers
                when '+' then matches[4].to_i
                else 0
                end
-    (count * sides) / 2 + modifier
+    avg_roll = count * (sides + 1) / 2.0
+    (avg_roll + modifier).to_i
   end
 
 end

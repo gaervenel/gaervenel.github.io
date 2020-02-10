@@ -1,4 +1,4 @@
-div class="stat-block#{' half' unless double}"
+div.stat-block
   h5=creature[:name]
   .type
     | #{creature[:size_class].capitalize}
@@ -80,6 +80,16 @@ div class="stat-block#{' half' unless double}"
           = text[0]
         - text[1..].each do |more|
           p #{more}
+  - if creature[:spellcasting]
+    .features
+      .feature
+        span.subhead> Spellcasting.
+        | #{creature[:spellcasting][:intro]} Spellcasting ability is #{ability_name(creature[:spellcasting][:ability])} (spell save DC #{creature[:spellcasting][:dc]}, #{'%+d' % creature[:spellcasting][:attack]} to hit with spell attacks). #{creature[:spellcasting][:outro]}
+        - creature[:spellcasting][:spells].each_with_index do |spells, level|
+          .spells
+            = level == 0 ? "Cantrips (at will):" : "#{ordinal(level)} level (#{creature[:spellcasting][:slots][level]} slots):"
+            - spells.join(', ').split(' ').each do |spell|
+              span.spell<=spell
 
   .actions
     h6 Actions

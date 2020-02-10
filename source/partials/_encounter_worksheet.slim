@@ -32,7 +32,7 @@ section.encounter.flex
               .label Note:
               .label HP:
 
-      .flex
+      .columns
         - encounter.creatures.each do |id, _|
           = partial('partials/stat_block', locals: { creature: data.creatures.send(id), double: false })
 

@@ -8,6 +8,10 @@
     justify-content: flex-start;
 }
 
+.flex.wrap {
+    flex-wrap: wrap;
+}
+
 @media print {
     .half {
         width: calc(100% / 2 - 0.1cm);

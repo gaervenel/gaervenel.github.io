@@ -10,5 +10,28 @@ fire_spirits:
     - The fire spirits are confused and enraged after hobgoblin artificers captured much of the energy of this place and enslaved other spirits. They will lash out at anything that comes within 60 ft. of the center of the holy site, but will not exit that area. They will hide under the seal if necessary to take cover from missile fire.
   battlefield:
     - A 20-ft. radius circle of stone obelisks surrounding a round stone seal carved with pictographs. The seal has been cracked, and a few blackened iron rods have been discarded next to it. All grass and shrubbery within 30 ft. of the seal has been consumed by fire.
+
+worg_stables:
+  creatures:
+    goblin_worker: 4
+    worg: 2
+    hobgoblin_worg_master: 1
+  question:
+    - Can the PCs get into the manufactory? Without alerting the artificer?
+  motivation:
+    - The worg master will attempt to fend off the party while sending a worker to raise the alarm. If his worgs die, he will attempt to retreat into the manufactory.
+
+hobgoblin_manufactory:
+  creatures:
+    goblin_worker: 4
+    hobgoblin_infantry: 2
+    hobgoblin_artificer: 1
+  question:
+    - Can the PCs discover what's going on in the hobgoblin manufactory?
+  motivation:
+    - The hobgoblin artificer will fight to the death to protect his secrets. His minions may not be so devoted, if he falls.
 ---
 = partial('partials/encounter_worksheet', locals: { encounter: current_page.data.fire_spirits })
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.worg_stables })
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.hobgoblin_manufactory })
+
