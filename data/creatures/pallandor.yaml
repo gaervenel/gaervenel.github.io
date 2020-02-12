@@ -3,7 +3,7 @@ size_class: medium
 type: humanoid
 keywords:
   - elf
-alignment: neutral good
+alignment: chaotic good
 ac: 14
 armor:
   - leather armor

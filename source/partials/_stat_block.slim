@@ -10,7 +10,7 @@ div.stat-block
 
   .ac
     span.b> Armor Class
-    = creature[:ac].to_s + (creature[:armor] ? " #{creature[:armor].join(', ')}" : '')
+    = creature[:ac].to_s + (creature[:armor] ? " (#{creature[:armor].join(', ')})" : '')
   .hp
     span.b> Hit Points
     | #{avg(creature[:hd])} (#{creature[:hd]})
