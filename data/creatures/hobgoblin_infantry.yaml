@@ -26,7 +26,8 @@ senses:
   darkvision: 60
 features:
   disciplined:
-    - Hobgoblins have advantage on saving throws against being frightened or charmed as long as they are within 60 feet of a hobgoblin ally they can see and hear who isn't incapacitated.
+    text:
+      - Hobgoblins have advantage on saving throws against being frightened or charmed as long as they are within 60 feet of a hobgoblin ally they can see and hear who isn't incapacitated.
 actions:
   longsword:
     melee: true

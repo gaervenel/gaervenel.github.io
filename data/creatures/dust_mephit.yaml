@@ -1,0 +1,53 @@
+name: Dust Mephit
+size_class: small
+type: elemental
+alignment: neutral evil
+ac: 12
+hd: 5d6
+speed:
+  walk: 30
+  fly: 30
+ability_scores:
+  str: 5
+  dex: 14
+  con: 0
+  int: 9
+  wis: 11
+  cha: 0
+skills:
+  perception: 2
+  stealth: 4
+vulnerability:
+  - fire
+damage_immunity:
+  - poison
+condition_immunity:
+  - poisoned
+senses:
+  darkvision: 60
+languages:
+  - auran
+  - terran
+cr: 0.5
+features:
+  death_burst:
+    text:
+      - When the mephit dies, it explodes in a burst of dust. Each creature within 5 feet of it must succeed on a DC 10 Constitution saving throw or be blinded for 1 minute. A blinded creature can repeat the saving throw on each of its turns, ending the effect on itself on a success.
+  innate_spellcasting:
+    recharge: 1/Day
+    text:
+      - The mephit can innately cast <span class="spell">sleep</span>, reuiring no material components. Its innate spellcasting ability is Charisma.
+actions:
+  claws:
+    attack: true
+    melee: true
+    weapon: true
+    hit: 4
+    reach: 5
+    targets: 1
+    damage: 1d4+2
+    damage_type: slashing
+  blinding_breath:
+    recharge: Recharge 6
+    text:
+      - The mephit exhales a 15-foot cone of blinding dust. Each creature in that area must succeed on a DC 10 Dexterity saving throw or be blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.

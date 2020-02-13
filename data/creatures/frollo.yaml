@@ -24,9 +24,11 @@ languages:
   - halfling
 features:
   stout_resilience:
-    - Frollo has advantage on saving throws against poison.
+    text:
+      - Frollo has advantage on saving throws against poison.
   brave:
-    - Frollo has advantage on saving throws against being frightened.
+    text:
+      - Frollo has advantage on saving throws against being frightened.
 actions:
   shortsword:
     melee: true

@@ -28,7 +28,8 @@ languages:
 cr: 0.5
 features:
   aggressive:
-    - As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.
+    text:
+      - As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.
 actions:
   greataxe:
     melee: true

@@ -71,7 +71,12 @@ $black: #111;
     }
 
     section {
+        height: 10.5in;
         page-break-before: always;
+    }
+
+    section.one-sided {
+        margin-right: 1cm;
     }
 
     .divider {

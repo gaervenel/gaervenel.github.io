@@ -33,11 +33,14 @@ languages:
   - ignan
 features:
   fire_form:
-    - The fire spirit can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the spirit or hits it with a melee attack while within 5 feet of it takes 5 (1d10) fire damage. In addition, the spirit can enter a hostile creature's space on a turn; that creature takes 5 (1d10) fire damage and catches fire. Until someone takes an action to douse the fire, the creature takes 5 (1d10) fire damage at the start of each of its turns.
+    text:
+      - The fire spirit can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the spirit or hits it with a melee attack while within 5 feet of it takes 5 (1d10) fire damage. In addition, the spirit can enter a hostile creature's space on a turn; that creature takes 5 (1d10) fire damage and catches fire. Until someone takes an action to douse the fire, the creature takes 5 (1d10) fire damage at the start of each of its turns.
   illumination:
-    - The spirit sheds bright light in a 20-foot radius and dim light in an additional 20 feet.
+    text:
+      - The spirit sheds bright light in a 20-foot radius and dim light in an additional 20 feet.
   water_susceptibility:
-    - For every 5 feet the spirit moves in water, or for every gallon of water splashed on it, it takes 1 cold damage.
+    text:
+      - For every 5 feet the spirit moves in water, or for every gallon of water splashed on it, it takes 1 cold damage.
 actions:
   touch:
     melee: true
@@ -48,5 +51,5 @@ actions:
     targets: 1
     damage: 2d4+3
     damage_type: fire
-    extra:
-      - and if the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 5 (1d10) fire damage at the start of each of its turns.
+    text:
+      - ", and if the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 5 (1d10) fire damage at the start of each of its turns."

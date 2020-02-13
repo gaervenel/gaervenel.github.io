@@ -24,7 +24,8 @@ senses:
   darkvision: 60
 features:
   keen_hearing_and_smell:
-    - The worg has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+    text:
+      - The worg has advantage on Wisdom (Perception) checks that rely on hearing or smell.
 actions:
   bite:
     melee: true
@@ -35,5 +36,5 @@ actions:
     targets: 1
     damage: 2d6+3
     damage_type: piercing
-    extra:
-      - and if the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.
+    text:
+      - ", and if the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone."

@@ -1,0 +1,21 @@
+.action
+  span.subhead> #{[titleize(title), ('(' + action[:recharge] + ')' if action[:recharge])].compact.join(' ')}.
+  - if action[:attack]
+    span.i>
+      = [('Melee' if action[:melee]), ('Ranged' if action[:ranged])].compact.join(' or ')
+      |  #{('Weapon' if action[:weapon])} Attack.
+    | #{'%d+' % action[:hit]} to hit,
+    = [(' reach ' + action[:reach].to_s + ' ft.' if action[:reach]), (' range ' + action[:range].join('/') + ' ft.' if action[:range])].compact.join(' or')
+    |, one target.
+    span.i<> Hit:
+    | #{avg(action[:damage])} (#{action[:damage]}) #{action[:damage_type]} damage
+    - if action[:text]
+      = action[:text][0]
+      - action[:text][1..].each do |text|
+        p=text
+    - else
+      |.
+  - else
+    = action[:text][0]
+    - action[:text][1..].each do |text|
+      p=text

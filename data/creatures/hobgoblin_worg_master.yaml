@@ -29,10 +29,12 @@ languages:
   - worg
 features:
   disciplined:
-    - Hobgoblins have advantage on saving throws against being frightened or charmed as long as they are within 60 feet of a hobgoblin ally they can see and hear who isn't incapacitated.
+    text:
+      - Hobgoblins have advantage on saving throws against being frightened or charmed as long as they are within 60 feet of a hobgoblin ally they can see and hear who isn't incapacitated.
 actions:
   multiattack:
-    text: The worg master makes two whip attacks.
+    text:
+      - The worg master makes two whip attacks.
   whip:
     melee: true
     weapon: true
@@ -43,4 +45,5 @@ actions:
     damage: 1d4+2
     damage_type: slashing
   command:
-    text: The worg master commands a worg within 60 ft. to attack. The worg can use its reaction to make a bite attack against a target. The worg may move up to 5 ft. prior to making the attack.
+    text:
+      - The worg master commands a worg within 60 ft. to attack. The worg can use its reaction to make a bite attack against a target. The worg may move up to 5 ft. prior to making the attack.

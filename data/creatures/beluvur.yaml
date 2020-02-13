@@ -29,7 +29,8 @@ languages:
   - infernal
 features:
   hellish_resistance:
-    - Beluvur has resistance to fire damage.
+    text:
+      - Beluvur has resistance to fire damage.
 actions:
   shortsword:
     melee: true

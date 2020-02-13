@@ -23,15 +23,25 @@ worg_stables:
 
 hobgoblin_manufactory:
   creatures:
-    goblin_worker: 4
-    hobgoblin_infantry: 2
+    hobgoblin_infantry: 4
+    goblin_worker: 3
     hobgoblin_artificer: 1
   question:
     - Can the PCs discover what's going on in the hobgoblin manufactory?
   motivation:
-    - The hobgoblin artificer will fight to the death to protect his secrets. His minions may not be so devoted, if he falls.
+    - The hobgoblins will fight to the death to protect his secrets. The goblin workers are not so devoted and are simply scared of the hobgoblins.
+
+orc_shaman:
+  creatures:
+    dust_mephit: 4
+    orc_shaman: 1
+  question:
+    - Can the PCs learn what the shaman knows about the land beyond the wall?
+  motivation:
+    - The orc shaman wishes to exchange information for the elemental binding stones. Belnys wants to slay the orc shaman, for being an orc, and doesn't want to hand over the stones.
 ---
 = partial('partials/encounter_worksheet', locals: { encounter: current_page.data.fire_spirits })
 = partial('partials/encounter_worksheet', locals: { encounter: current_page.data.worg_stables })
 = partial('partials/encounter_worksheet', locals: { encounter: current_page.data.hobgoblin_manufactory })
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.orc_shaman })
 

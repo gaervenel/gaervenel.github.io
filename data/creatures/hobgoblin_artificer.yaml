@@ -21,14 +21,15 @@ ability_scores:
   wis: 12
   cha: 10
 skills:
-  arcana: +5
+  arcana: 5
 senses:
   darkvision: 60
 languages:
   - goblin
 features:
   disciplined:
-    - Hobgoblins have advantage on saving throws against being frightened or charmed as long as they are within 60 feet of a hobgoblin ally they can see and hear who isn't incapacitated.
+    text:
+      - Hobgoblins have advantage on saving throws against being frightened or charmed as long as they are within 60 feet of a hobgoblin ally they can see and hear who isn't incapacitated.
 spellcasting:
   level: 5
   ability: int

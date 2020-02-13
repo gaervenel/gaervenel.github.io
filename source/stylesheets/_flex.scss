@@ -12,6 +12,10 @@
     flex-wrap: wrap;
 }
 
+.flex.tall.fill-page {
+    justify-content: space-between;
+}
+
 @media print {
     .half {
         width: calc(100% / 2 - 0.1cm);

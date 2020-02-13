@@ -1,0 +1,39 @@
+name: Remin
+size_class: medium
+type: humanoid
+keywords:
+  - goliath
+alignment: neutral
+ac: 12
+armor:
+  - hide
+hd: 3d8+6
+speed:
+  walk: 30
+ability_scores:
+  str: 16
+  dex: 10
+  con: 15
+  int: 8
+  wis: 8
+  cha: 11
+skills:
+  athletics: 5
+languages:
+  - common
+  - giant
+actions:
+  maul:
+    melee: true
+    weapon: true
+    attack: true
+    hit: 5
+    reach: 5
+    targets: 1
+    damage: 2d6+5
+    damage_type: bludgeoning
+reactions:
+  stone's endurance:
+    recharge: Recharges after a Short or Long Rest
+    text:
+      - When Remin takes damage, he can use his reaction to reduce the damage by 1d12+2.

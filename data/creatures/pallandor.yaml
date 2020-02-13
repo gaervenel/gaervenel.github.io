@@ -7,7 +7,7 @@ alignment: chaotic good
 ac: 14
 armor:
   - leather armor
-hd: 4d8
+hd: 3d8
 speed:
   walk: 35
 ability_scores:
@@ -27,7 +27,8 @@ languages:
   - elvish
 features:
   fey_ancestry:
-    - Pallandor has advantage on saving throws against being charmed, and magic can't put him to sleep.
+    text:
+      - Pallandor has advantage on saving throws against being charmed, and magic can't put him to sleep.
 actions:
   dagger:
     melee: true

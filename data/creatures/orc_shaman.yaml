@@ -1,0 +1,52 @@
+name: Orc Shaman
+tier: journeyman
+number: pair
+size_class: medium
+type: humanoid
+keywords:
+  - orc
+alignment: chaotic neutral
+ac: 14
+armor:
+  - hide
+hd: 10d8+20
+speed:
+  walk: 30
+ability_scores:
+  str: 12
+  dex: 14
+  con: 14
+  int: 10
+  wis: 16
+  cha: 8
+skills:
+  nature: 3
+  survival: 6
+languages:
+  - orc
+  - common
+  - primordial
+spellcasting:
+  level: 7
+  ability: wis
+  dc: 14
+  attack: 6
+  intro: The orc shaman is a 7th-level spellcaster.
+  outro: "It has the following druid spells prepared:"
+  slots: [ 0, 4, 3, 3, 1 ]
+  spells:
+    - [ produce flame, frostbite, gust, mold earth ]
+    - [ absorb elements, earth tremor, longstrider ]
+    - [ earthbind, flaming sphere, pass without trace ]
+    - [ dispel magic, erupting earth, wind wall ]
+    - [ conjure minor elementals ]
+actions:
+  scimitar:
+    melee: true
+    weapon: true
+    attack: true
+    hit: 5
+    reach: 5
+    targets: 1
+    damage: 1d6+2
+    damage_type: slashing

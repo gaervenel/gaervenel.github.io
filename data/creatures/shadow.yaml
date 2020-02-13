@@ -43,11 +43,14 @@ append:
   skills: (+6 in dim light or darkness)
 features:
   amorphous:
-    - The shadow can move through a space as narrow as 1 inch wide without squeezing.
+    text:
+      - The shadow can move through a space as narrow as 1 inch wide without squeezing.
   shadow stealth:
-    - While in dim light or darkness, the shadow can take the Hide action as a bonus action.
+    text:
+      - While in dim light or darkness, the shadow can take the Hide action as a bonus action.
   sunlight weakness:
-    - While in sunlight, the shadow has disadvantage on attack rolls, ability checks, and saving throws.
+    text:
+      - While in sunlight, the shadow has disadvantage on attack rolls, ability checks, and saving throws.
 actions:
   strength drain:
     melee: true
@@ -58,6 +61,6 @@ actions:
     targets: 1
     damage: 2d6+2
     damage_type: necrotic
-    extra:
-      - and the target's strength score is reduced by 1d4. The target dies if this reduces its Strength to 0. Otherwise, the reduction lasts until the target finishes a short or long rest.
+    text:
+      - ", and the target's strength score is reduced by 1d4. The target dies if this reduces its Strength to 0. Otherwise, the reduction lasts until the target finishes a short or long rest."
       - If a non-evil humanoid dies from this attack, a new shadow rises from the corpse 1d4 hours later.

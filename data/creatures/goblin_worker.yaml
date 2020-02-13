@@ -23,7 +23,8 @@ senses:
   darkvision: 60
 features:
   nimble_escape:
-    - The goblin can take the Disengage or Hide action as a bonus action on each of its turns.
+    text:
+      - The goblin can take the Disengage or Hide action as a bonus action on each of its turns.
 actions:
   club:
     melee: true
