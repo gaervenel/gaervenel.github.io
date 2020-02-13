@@ -1,0 +1,14 @@
+.magic-item
+  .heading
+    h5 = item[:name]
+    .magic
+      = item[:type].capitalize
+      = " (#{item[:subtype]})" if item[:subtype]
+      |, #{item[:rarity]}
+      = " (#{item[:attunement]})" if item[:attunement]
+  - item[:text].each do |text|
+    p=text
+  - (item[:effects] || []).each do |title, text|
+    p
+      span.subhead> #{titleize(title)}.
+      = text

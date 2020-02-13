@@ -464,6 +464,20 @@ aside {
     }
 }
 
+.magic-item {
+    .heading > * {
+        margin: 0;
+    }
+    .heading {
+        margin-bottom: 0.5rem;
+    }
+    margin-right: 1cm;
+}
+
+.magic-item + .magic-item {
+    margin-top: 1.5in;
+}
+
 .bg {
     background-color: $bg;
 }
