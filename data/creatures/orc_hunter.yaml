@@ -1,0 +1,57 @@
+name: Orc Hunter
+tier: journeyman
+number: party
+size_class: medium
+type: humanoid
+keywords:
+  - orc
+alignment: chaotic evil
+ac: 14
+armor:
+  - hide
+hd: 6d8+6
+speed:
+  walk: 30
+ability_scores:
+  str: 13
+  dex: 16
+  con: 12
+  int: 10
+  wis: 12
+  cha: 8
+skills:
+  animal handling: 3
+  perception: 3
+  survival: 3
+senses:
+  darkvision: 60
+languages:
+  - orc
+features:
+  aggressive:
+    text:
+      - As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.
+actions:
+  multiattack:
+    text:
+      - The orc hunter makes two attacks with its longbow or its handaxe.
+  longbow:
+    weapon: true
+    ranged: true
+    attack: true
+    hit: 5
+    range: [150, 600]
+    targets: 1
+    damage: 1d8+3
+    damage_type: piercing
+  handaxe:
+    weapon: true
+    melee: true
+    ranged: true
+    attack: true
+    hit: 3
+    reach: 5
+    range: [20, 60]
+    targets: 1
+    damage: 1d6+1
+    damage_type: slashing

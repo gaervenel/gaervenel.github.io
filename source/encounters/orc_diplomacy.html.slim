@@ -1,0 +1,46 @@
+---
+title: Orc Diplomacy Encounters
+
+orc_hunters:
+  creatures:
+    orc_hunter: 2
+    orc_bloodhound: 6
+  question:
+    - Will the PCs help Lokhan escape from the orc hunters?
+  motivation:
+    - The orcs and their hounds are pursuing an orc outcast. They will fight the PCs only in self defense or if they interfere with their hunt. If the hounds are slain, the hunters will attempt to retreat.
+  battlefield:
+    - Lokhan is hiding inside a water mill at the top of a small waterfall. The hunters and hounds cross the stream below the waterfall, following his scent. The area has scattered trees.
+
+lokhan:
+  creatures:
+    lokhan: 1
+  question:
+    - Will the PCs let Lokhan go? What can they learn from him?
+  motivation:
+    - Lokhan just wants to go into exile north of the wall to seek his own destiny. He was exiled for criticizing the chief and for his unorthodox beliefs. He believes in a god he calls Karrghed, who judges the weak and rewards the strong, and he believes that Karrghed has judged the white eagle tribe. Lokhan believes chief Ulam and Agrigoth are unambitious cowards.
+
+meeting_with_the_white_eagle:
+  creatures:
+    orc_chief: 1
+    orc_honor_guard: 2
+    orc_shaman: 1
+  question:
+    - Will the PCs be able to make an alliance, or will they take this opportunity to strike down their foes?
+  motivation:
+    - The orcs are not looking for a fight, but will defend themselves if attacked. They are reluctant to enter an alliance with Rathbaran, do not trust civilized folk, and question whether the PCs have the authority to make one anyway.
+
+random_encounter:
+  creatures:
+    leucrotta: 2
+  question:
+    - Can the PCs survive their encounter with these cruel predators?
+  motivation:
+    - The leucrotta want to torment, kill, and eat the characters. They will flee if reduced to 22 hp or fewer.
+  treasure:
+    - If the PCs track the leucrotta to their lair, they find 350 gp worth of gems, a <span class="magic">potion of greater healing</span>, a <span class="magic">Heward's handy haversack</span>, and a <span class="magic">Quaal's feather token</span> (fan).
+---
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.meeting_with_the_white_eagle })
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.orc_hunters })
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.lokhan })
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.random_encounter })

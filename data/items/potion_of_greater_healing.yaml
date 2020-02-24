@@ -1,0 +1,5 @@
+name: Potion of Greater Healing
+type: potion
+rarity: rare
+text:
+  - You regain 4d4 + 4 hit points when you drink this potion.

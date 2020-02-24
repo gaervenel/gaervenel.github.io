@@ -30,6 +30,12 @@ module TextHelpers
     end
   end
 
+  def spell_list spells
+    spells.map do |spell|
+      "<span class=\"spell\">#{spell}</span>"
+    end.join(', ')
+  end
+
   def ability_name ability
     ABILITY_SCORES[ability.to_sym]
   end

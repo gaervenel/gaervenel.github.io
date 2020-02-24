@@ -23,6 +23,12 @@ section.encounter.flex
         - encounter.battlefield.each do |text|
           p=text
 
+    - if encounter.treasure
+      .treasure
+        h5 Treasure
+        - encounter.treasure.each do |text|
+          p=text
+
     .stats
       .health
         - encounter.creatures.each do |id, count|

@@ -31,6 +31,11 @@ div.stat-block
 
   .bar
 
+  - if creature[:saving_throws]
+    .saving-throws.hang
+      span.b> Saving Throws
+      = creature[:saving_throws].map { |save, bonus| "#{save.capitalize} #{'%+d' % bonus}" }.join(', ')
+
   - if creature[:skills]
     .skills.hang
       span.b> Skills
@@ -88,11 +93,18 @@ div.stat-block
       .feature
         span.subhead> Spellcasting.
         | #{creature[:spellcasting][:intro]} Spellcasting ability is #{ability_name(creature[:spellcasting][:ability])} (spell save DC #{creature[:spellcasting][:dc]}, #{'%+d' % creature[:spellcasting][:attack]} to hit with spell attacks). #{creature[:spellcasting][:outro]}
-        - creature[:spellcasting][:spells].each_with_index do |spells, level|
+        - if creature[:spellcasting][:warlock]
           .spells
-            = level == 0 ? "Cantrips (at will):" : "#{ordinal(level)} level (#{creature[:spellcasting][:slots][level]} slots):"
-            - spells.join(', ').split(' ').each do |spell|
-              span.spell<=spell
+            | Cantrips (at will): 
+            = spell_list(creature[:spellcasting][:spells][0])
+          .spells
+            | 1st&ndash;#{ordinal(creature[:spellcasting][:spells].size - 1)} level (2 #{ordinal(creature[:spellcasting][:spells].size - 1)}-level slots):
+            = spell_list(creature[:spellcasting][:spells][1..].flatten)
+        - else
+          - creature[:spellcasting][:spells].each_with_index do |spells, level|
+            .spells
+              = level == 0 ? "Cantrips (at will): " : "#{ordinal(level)} level (#{creature[:spellcasting][:slots][level]} slots): "
+              = spell_list(spells)
 
   .actions
     h6 Actions

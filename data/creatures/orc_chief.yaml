@@ -1,0 +1,57 @@
+name: Orc Chief
+tier: journeyman
+number: pair
+size_class: medium
+type: humanoid
+keywords:
+  - orc
+alignment: chaotic evil
+ac: 16
+armor:
+  - chain mail
+hd: 8d8+32
+speed:
+  walk: 30
+ability_scores:
+  str: 18
+  dex: 14
+  con: 18
+  int: 11
+  wis: 11
+  cha: 14
+saving_throws:
+  str: 7
+  dex: 5
+skills:
+  intimidation: 5
+senses:
+  darkvision: 60
+languages:
+  - orc
+  - common
+features:
+  aggressive:
+    text:
+      - As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.
+actions:
+  multiattack:
+    text:
+      - The orc chief makes two attacks with its greataxe or its spear.
+  greataxe:
+    attack: true
+    melee: true
+    weapon: true
+    hit: 7
+    reach: 5
+    damage: 1d12+4
+    damage_type: slashing
+  spear:
+    attack: true
+    melee: true
+    ranged: true
+    weapon: true
+    hit: 7
+    reach: 5
+    range: [20, 60]
+    damage: 1d6+4
+    damage_type: piercing

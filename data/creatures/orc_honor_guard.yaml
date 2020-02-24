@@ -1,0 +1,43 @@
+name: Orc Honor Guard
+tier: journeyman
+number: party
+size_class: medium
+type: humanoid
+keywords:
+  - orc
+alignment: chaotic evil
+ac: 16
+armor:
+  - chain mail
+hd: 6d8+12
+speed:
+  walk: 30
+ability_scores:
+  str: 16
+  dex: 13
+  con: 14
+  int: 9
+  wis: 11
+  cha: 10
+skills:
+  intimidation: 2
+senses:
+  darkvision: 60
+languages:
+  - orc
+features:
+  aggressive:
+    text:
+      - As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.
+  sworn_to_protect:
+    text:
+      - As long as it can see the chief it is assigned to guard, the honor guard does an extra 4 (1d8) damage on weapon attacks. If the chief is slain and the honor guard lives, it will kill itself in shame.
+actions:
+  glaive:
+    attack: true
+    melee: true
+    weapon: true
+    hit: 5
+    reach: 10
+    damage: 1d10+3
+    damage_type: slashing
