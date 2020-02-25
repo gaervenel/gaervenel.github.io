@@ -7,7 +7,7 @@ armor:
   - natural armor
 hd: 9d10+18
 speed:
-  walk: 90
+  walk: 50
 ability_scores:
   str: 18
   dex: 14
