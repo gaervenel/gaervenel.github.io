@@ -5,4 +5,5 @@ attunement: requires attunement by a halfling of Stumblefoot ancestry
 text:
   - This circular medallion is made of tarnished metal, and is emblazoned with a setting sun behind a majestic ship. On first glance, it does not appear to have more than sentimental value. A <span class="spell">detect magic</span> spell does not reveal that the amulet is magical. But during Cyr Stumblefoot's initiation on the wall, the amulet revealed one of its secrets.
 effects:
-  luff up: The amulet fills you with confidence as you leap into the air, and you feel the wind supporting you. You can use your Wisdom score instead of your Strength score when calculating how long or high you can jump.
+  luff up:
+    - The amulet fills you with confidence as you leap into the air, and you feel the wind supporting you. You can use your Wisdom score instead of your Strength score when calculating how long or high you can jump.

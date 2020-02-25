@@ -71,8 +71,8 @@ $black: #111;
     }
 
     section {
-        height: 10.5in;
         page-break-before: always;
+        max-height: 11in;
     }
 
     section.one-sided {
