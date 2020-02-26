@@ -72,7 +72,6 @@ $black: #111;
 
     section {
         page-break-before: always;
-        max-height: 11in;
     }
 
     section.one-sided {
@@ -417,6 +416,11 @@ aside {
 }
 
 .encounter {
+    // Not sure why but 12in fits on a page.
+    // 12.5in is too much, though, and causes a blank page
+    // between encounters. This is a hack, probably a
+    // permanent one, sadly.
+    max-height: 12in;
     .initiative-tracker {
         display: flex;
         flex-direction: column;
@@ -424,6 +428,7 @@ aside {
         border-radius: 5px;
         border: 1px solid $bg-dark;
         margin-right: 0.8rem;
+        max-height: 11in;
         .initiative {
             line-height: 1.5;
             height: 2em;
