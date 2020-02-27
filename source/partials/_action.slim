@@ -4,11 +4,13 @@
     span.i>
       = [('Melee' if action[:melee]), ('Ranged' if action[:ranged])].compact.join(' or ')
       |  #{('Weapon' if action[:weapon])} Attack.
-    | #{'%d+' % action[:hit]} to hit,
+    | #{'%+d' % action[:hit]} to hit,
     = [(' reach ' + action[:reach].to_s + ' ft.' if action[:reach]), (' range ' + action[:range].join('/') + ' ft.' if action[:range])].compact.join(' or')
     |, one target.
     span.i<> Hit:
     | #{avg(action[:damage])} (#{action[:damage]}) #{action[:damage_type]} damage
+    - if action[:extra_damage]
+      |  plus #{avg(action[:extra_damage])} (#{action[:extra_damage]}) #{action[:extra_damage_type]} damage
     - if action[:text]
       = action[:text][0]
       - action[:text][1..].each do |text|

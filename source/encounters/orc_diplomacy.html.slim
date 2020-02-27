@@ -52,9 +52,29 @@ goblin_ambush:
     - The goblinoids attack from the top of a steep ridge (difficult terrain), where the goblins can gain total cover by dropping prone.
   treasure:
     - Between them, the goblinoids have 136 sp.
+
+corrupted_water_spirits:
+  creatures:
+    water_spirit_corrupted: 2
+  question:
+    - Can the PCs make it to the tomb of the orc warchief?
+  motivation:
+    - The spirits attack anything that comes near the mirror of heaven.
+
+polg:
+  creatures:
+    polg: 1
+    orc_hunter: 1
+    orc_bloodhound: 2
+  question:
+    - How will Thargra and her sister react to each other?
+  motivation:
+    - Polg hates that Thargra has joined the militia and prefers to kill her for honor. Polg will not yield to her sister willingly. She may be swayed by a request for mercy.
 ---
 = partial('partials/encounter_worksheet', locals: { encounter: current_page.data.meeting_with_the_white_eagle })
 = partial('partials/encounter_worksheet', locals: { encounter: current_page.data.orc_hunters })
 = partial('partials/encounter_worksheet', locals: { encounter: current_page.data.lokhan })
 = partial('partials/encounter_worksheet', locals: { encounter: current_page.data.random_encounter })
 = partial('partials/encounter_worksheet', locals: { encounter: current_page.data.goblin_ambush })
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.corrupted_water_spirits })
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.polg })
