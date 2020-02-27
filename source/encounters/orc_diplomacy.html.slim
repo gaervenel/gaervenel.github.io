@@ -39,8 +39,22 @@ random_encounter:
     - The leucrotta want to torment, kill, and eat the characters. They will flee if reduced to 22 hp or fewer.
   treasure:
     - If the PCs track the leucrotta to their lair, they find 350 gp worth of gems, a <span class="magic">potion of greater healing</span>, a <span class="magic">Heward's handy haversack</span>, and a <span class="magic">Quaal's feather token</span> (fan).
+
+goblin_ambush:
+  creatures:
+    goblin_scout: 6
+    bugbear_scout: 2
+  question:
+    - Can the PCs survive an ambush by a goblin scouting party?
+  motivation:
+    - The goblinoids attack only from an advantageous position and try to gain surprise. If the battle starts to turn, they will flee.
+  battlefield:
+    - The goblinoids attack from the top of a steep ridge (difficult terrain), where the goblins can gain total cover by dropping prone.
+  treasure:
+    - Between them, the goblinoids have 136 sp.
 ---
 = partial('partials/encounter_worksheet', locals: { encounter: current_page.data.meeting_with_the_white_eagle })
 = partial('partials/encounter_worksheet', locals: { encounter: current_page.data.orc_hunters })
 = partial('partials/encounter_worksheet', locals: { encounter: current_page.data.lokhan })
 = partial('partials/encounter_worksheet', locals: { encounter: current_page.data.random_encounter })
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.goblin_ambush })

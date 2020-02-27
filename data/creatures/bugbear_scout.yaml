@@ -1,0 +1,56 @@
+name: Bugbear Scout
+tier: journeyman
+number: party
+size_class: medium
+type: humanoid
+keywords:
+  - goblinoid
+alignment: chaotic evil
+ac: 16
+armor:
+  - hide armor
+  - shield
+hd: 6d8+6
+speed:
+  walk: 30
+ability_scores:
+  str: 16
+  dex: 14
+  con: 13
+  int: 8
+  wis: 12
+  cha: 9
+languages:
+  - goblin
+skills:
+  stealth: 6
+senses:
+  darkvision: 60
+features:
+  brute:
+    text:
+      - The bugbear deals one extra damage die when it hits with a melee weapon.
+  surprise_attack:
+    text:
+      - If the bugbear surprises a creature ad hits it with an attack during the first round of combat, the target takes an extra 7 (2d6) damage from the attack.
+actions:
+  morningstar:
+    melee: true
+    weapon: true
+    attack: true
+    hit: 5
+    reach: 5
+    targets: 1
+    damage: 2d8+3
+    damage_type: piercing
+  javelin:
+    melee: true
+    weapon: true
+    ranged: true
+    attack: true
+    hit: 5
+    reach: 5
+    range: [20, 60]
+    targets: 1
+    damage: 1d6+3
+    damage_type: piercing

@@ -1,0 +1,51 @@
+name: Goblin Scout
+tier: journeyman
+number: gang
+size_class: small
+type: humanoid
+keywords:
+  - goblinoid
+alignment: neutral evil
+ac: 14
+armor:
+  - leather armor
+hd: 4d6+4
+speed:
+  walk: 30
+ability_scores:
+  str: 11
+  dex: 16
+  con: 12
+  int: 8
+  wis: 12
+  cha: 8
+skills:
+  stealth: 7
+senses:
+  darkvision: 60
+languages:
+  - goblin
+features:
+  nimble_escape:
+    text:
+      - The goblin scout can Disengage or Hide as a bonus action.
+actions:
+  shortbow:
+    weapon: true
+    ranged: true
+    attack: true
+    hit: 5
+    range: [80, 320]
+    targets: 1
+    damage: 1d6+3
+    damage_type: piercing
+  shortsword:
+    weapon: true
+    melee: true
+    ranged: true
+    attack: true
+    hit: 5
+    reach: 5
+    targets: 1
+    damage: 1d6+3
+    damage_type: piercing
