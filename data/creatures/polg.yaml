@@ -35,7 +35,7 @@ features:
 actions:
   multiattack:
     text:
-      - Polg makes two attacks with her battleaxe or her javelin.
+      - Polg makes two attacks with her battleaxe or her javelin, or one shove and one grapple.
   battleaxe:
     attack: true
     melee: true
