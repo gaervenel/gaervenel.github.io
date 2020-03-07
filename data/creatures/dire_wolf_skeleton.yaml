@@ -1,10 +1,11 @@
 name: Dire Wolf Skeleton
+tier: journeyman
+number: party
 size_class: large
 type: undead
 alignment: lawful evil
 ac: 12
-hp: 34
-hd: 4d10+12
+hd: 4d10+18
 speed:
   walk: 50
 ability_scores:
@@ -31,7 +32,7 @@ actions:
     hit: 5
     reach: 5
     targets: 1
-    damage: 2d4+3
+    damage: 2d6+3
     damage_type: piercing
     text:
       - ", and the target must succeed on a DC 13 Strength saving throw or be knocked prone."

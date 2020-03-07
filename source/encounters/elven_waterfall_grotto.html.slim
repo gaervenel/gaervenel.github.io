@@ -1,0 +1,22 @@
+---
+title: Elven Waterfall Grotto Encounters
+
+grotto:
+  creatures:
+    banshee: 1
+    dire_wolf_skeleton: 2
+  question:
+    - Can the PCs recover the orb sought by Suthalion?
+  motivation:
+    - The banshee hates all life, and the dire wolf skeleton is devoted to her.
+
+waterfall_approach:
+  creatures:
+    shadow: 4
+  question:
+    - Can the PCs defeat the shadows and make it to the grotto?
+  motivation:
+    - The shadows hate all life.
+---
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.waterfall_approach })
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.grotto })

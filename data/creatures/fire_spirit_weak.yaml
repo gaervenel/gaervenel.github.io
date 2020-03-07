@@ -1,4 +1,6 @@
 name: Fire Spirit (Weakened)
+tier: apprentice
+number: pair
 size_class: medium
 type: elemental
 alignment: neutral
@@ -10,7 +12,7 @@ ability_scores:
   str: 10
   dex: 16
   con: 15
-  int: 6
+  int: 4
   wis: 10
   cha: 6
 resistance:

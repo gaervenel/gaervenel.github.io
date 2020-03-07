@@ -1,0 +1,60 @@
+name: Black Pudding
+size_class: large
+type: ooze
+alignment: unaligned
+ac: 7
+hd: 10d10+30
+speed:
+  walk: 20
+  climb: 20
+ability_scores:
+  str: 16
+  dex: 5
+  con: 16
+  int: 1
+  wis: 6
+  cha: 1
+damage_immunity:
+  - acid
+  - cold
+  - lightning
+  - slashing
+condition_immunity:
+  - blinded
+  - charmed
+  - deafened
+  - exhaustion
+  - frightened
+  - prone
+senses:
+  blindsight: 60
+cr: 4
+features:
+  amorphous:
+    text:
+      - The pudding can move through a space as narrow as 1 inch wide without squeezing.
+  corrosive_form:
+    text:
+      - A creature that touches the pudding or hits it with a melee attack while within 5 feet of it takes 4 (1d8) acid damage. Any nonmagical weapon made of metal or wood that hits the pudding corrodes. After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls. If its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal or wood that hits the ooze is destroyed after dealing damage.
+      - The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.
+  spider_climb:
+    text:
+      - The pudding can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+actions:
+  pseudopod:
+    melee: true
+    weapon: true
+    attack: true
+    hit: 6
+    reach: 5
+    targets: 1
+    damage: 1d6+3
+    damage_type: bludgeoning
+    extra_damage: 4d8
+    extra_damage_type: acid
+    text:
+      - ". In addition, nonmagical armor worn by the target is partly dissolved and takes a permanent and cumulative -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10."
+reactions:
+  split:
+    text:
+      - When a pudding that is Medium or larger is subjected to lightning or slashing damage, it splits into two new puddings if it has at least 10 hit points. Each new pudding has hit points equal to half the original pudding's, rounded down. New puddings are one size smaller than the original pudding.

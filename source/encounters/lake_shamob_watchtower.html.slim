@@ -1,0 +1,25 @@
+---
+title: Lake Shamob Watchtower Encounters
+
+gray_ooze:
+  creatures:
+    gray_ooze: 4
+  question:
+    - Can the PCs escape from the gray ooze with their lives and gear intact? Will the ooze prevent them from investigating the stone circle?
+  motivation:
+    - The oozes are hungry.
+  battlefield:
+    - A stone circle in a wide underground cavern, with plenty of stalactites and stalagmites. Mostly difficult terrain.
+
+earth_spirits:
+  creatures:
+    earth_spirit: 2
+  question:
+    - Can the PCs get away from the stone circle with the seal and their lives?
+  motivation:
+    - The earth spirits are full of rage and attack any living creatures that come within the stone circle.
+  battlefield:
+    - A stone circle in a wide underground cavern, with plenty of stalactites and stalagmites. Mostly difficult terrain.
+---
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.gray_ooze })
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.earth_spirits })

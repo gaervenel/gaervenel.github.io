@@ -3,7 +3,7 @@
   - if action[:attack]
     span.i>
       = [('Melee' if action[:melee]), ('Ranged' if action[:ranged])].compact.join(' or ')
-      |  #{('Weapon' if action[:weapon])} Attack.
+      |  #{('Weapon' if action[:weapon])}#{('Spell' if action[:spell])} Attack.
     | #{'%+d' % action[:hit]} to hit,
     = [(' reach ' + action[:reach].to_s + ' ft.' if action[:reach]), (' range ' + action[:range].join('/') + ' ft.' if action[:range])].compact.join(' or')
     |, one target.

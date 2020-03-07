@@ -1,0 +1,54 @@
+name: Earth Spirit
+tier: journeyman
+number: pair
+size_class: medium
+type: elemental
+alignment: neutral
+ac: 16
+armor:
+  - natural armor
+hd: 9d8+27
+speed:
+  walk: 30
+  burrow: 30
+ability_scores:
+  str: 16
+  dex: 10
+  con: 17
+  int: 4
+  wis: 10
+  cha: 5
+vulnerability:
+  - thunder
+resistance:
+  - bludgeoning, piercing, and slashing from nonmagical weapons
+damage_immunity:
+  - poison
+condition_immunity:
+  - exhaustion
+  - paralyzed
+  - petrified
+  - poisoned
+  - unconscious
+senses:
+  darkvision: 60
+  tremorsense: 60
+languages:
+  - terran
+features:
+  earth_glide:
+    text:
+      - The elemental can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through.
+actions:
+  multiattack:
+    text:
+      - The elemental makes two slam attacks.
+  slam:
+    melee: true
+    weapon: true
+    attack: true
+    hit: 5
+    reach: 5
+    targets: 1
+    damage: 2d8+3
+    damage_type: bludgeoning

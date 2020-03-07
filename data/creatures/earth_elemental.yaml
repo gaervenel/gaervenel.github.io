@@ -1,0 +1,54 @@
+name: Earth Elemental
+size_class: large
+type: elemental
+alignment: neutral
+ac: 17
+armor:
+  - natural armor
+hd: 12d10+60
+speed:
+  walk: 30
+  burrow: 30
+ability_scores:
+  str: 20
+  dex: 8
+  con: 20
+  int: 5
+  wis: 10
+  cha: 5
+vulnerability:
+  - thunder
+resistance:
+  - bludgeoning, piercing, and slashing from nonmagical weapons
+damage_immunity:
+  - poison
+condition_immunity:
+  - exhaustion
+  - paralyzed
+  - petrified
+  - poisoned
+  - unconscious
+senses:
+  darkvision: 60
+  tremorsense: 60
+languages:
+  - terran
+features:
+  earth_glide:
+    text:
+      - The elemental can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through.
+  siege_monster:
+    text:
+      - The elemental deals double damage to objects and structures.
+actions:
+  multiattack:
+    - The elemental makes two slam attacks.
+  slam:
+    melee: true
+    weapon: true
+    attack: true
+    hit: 8
+    reach: 5
+    targets: 1
+    damage: 2d8+5
+    damage_type: bludgeoning
