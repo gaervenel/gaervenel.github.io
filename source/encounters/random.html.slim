@@ -1,0 +1,14 @@
+---
+title: Random Encounters
+
+orc_war_band:
+  creatures:
+    orc_sergeant: 1
+    orc_skirmisher: 3
+    orc_hunter: 2
+  question:
+    - Will the PCs fight the orcs or avoid them?
+  motivation:
+    - The orcs are out looking to loot and pillage. They will not attack a clearly superior force by choice, but they will fight to the death if cornered.
+---
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.orc_war_band })

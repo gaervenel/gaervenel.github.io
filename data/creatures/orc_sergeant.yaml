@@ -1,55 +1,51 @@
-name: Orc Skirmisher
-tier: apprentice
+name: Orc Sergeant
+tier: journeyman
 number: party
 size_class: medium
 type: humanoid
 keywords:
   - orc
 alignment: chaotic evil
-ac: 13
+ac: 16
 armor:
-  - hide armor
-hp: 15
-hd: 2d8+6
+  - chain mail
+hd: 5d8+15
 speed:
   walk: 30
 ability_scores:
   str: 16
   dex: 12
   con: 16
-  int: 7
-  wis: 11
+  int: 9
+  wis: 10
   cha: 10
 skills:
   intimidation: 2
 senses:
   darkvision: 60
 languages:
-  - common
   - orc
-cr: 0.5
+  - common
 features:
   aggressive:
     text:
       - As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.
 actions:
   greataxe:
-    melee: true
     weapon: true
+    melee: true
     attack: true
     hit: 5
-    reach: 5
     targets: 1
     damage: 1d12+3
     damage_type: slashing
   javelin:
+    weapon: true
     melee: true
     ranged: true
-    weapon: true
     attack: true
-    hit: 5
-    reach: 5
     range: [30, 120]
+    hit: 5
     targets: 1
     damage: 1d6+3
     damage_type: piercing
