@@ -1,7 +1,7 @@
 name: Stumblefoot Amulet
 type: wondrous item
 rarity: very rare
-attunement: requires attunement by a halfling of Stumblefoot ancestry
+attunement: requires attunement by a halfling
 text:
   - This circular medallion is made of tarnished metal, and is emblazoned with a setting sun behind a majestic ship. On first glance, it does not appear to have more than sentimental value. A <span class="spell">detect magic</span> spell does not reveal that the amulet is magical. But during Cyr Stumblefoot's initiation on the wall, the amulet revealed one of its secrets.
 effects:

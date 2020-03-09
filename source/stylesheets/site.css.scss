@@ -200,7 +200,7 @@ table {
         }
     }
     // If we have more than one tbody, then let's stripe them instead
-    tbody:nth-child(even) {
+    tbody:nth-of-type(even) {
         background-color: $bg-light;
     }
     .spell, .magic, .reference, .elvish {
