@@ -40,8 +40,6 @@ features:
   water_form:
     text:
       - The water spirit can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the spirit or hits it with a melee attack while within 5 feet of it takes 5 (1d10) acid damage. In addition, the spirit can enter a hostile creature's space on a turn; that creature takes 5 (1d10) acid damage.
-  freeze:
-    text:
       - If the water spirit takes cold damage, it partially freezes; its speed is reduced by 10 feet until the end of its next turn.
 actions:
   slam:
