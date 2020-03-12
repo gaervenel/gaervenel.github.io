@@ -1,0 +1,23 @@
+---
+title: Keep at the End of the Wall Encounters
+
+hag_coven:
+  creatures:
+    sea_hag: 3
+  question:
+    - Do the PCs have anything to bargain for the knowledge they seek?
+  motivation:
+    - The sea hags are too powerful for the party as a coven, and they know it (see MM p. 176). They know the location and nature of the <span class="magic">headdress of the warchief</span>, and would potentially exchange it for something else of value.
+
+merrow:
+  creatures:
+    merrow: 3
+  question:
+    - Can the PCs escape the merrow ambush in the fallen tower?
+  motivation:
+    - The merrow seek to harpoon a character and drag them into the sea. If they succeed, or drop to 1/3 of their hp, they will retreat. They won't pursue far if the characters retreat on land.
+  treasure:
+    - The merrow possess a pink pearl worth 100 gp.
+---
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.merrow })
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.hag_coven })

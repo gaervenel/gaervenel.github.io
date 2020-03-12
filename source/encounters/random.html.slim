@@ -1,6 +1,15 @@
 ---
 title: Random Encounters
 
+ghostwise_nightgliders:
+  creatures:
+    ghostwise_nightglider: 4
+    giant_owl: 4
+  question:
+    - Can the PCs learn any useful information from the ghostwise halflings?
+  motivation:
+    - The ghostwise halflings are distrustful of strangers and know little of the lands south of the wall. They can be won over with gifts or hospitality.
+
 orc_war_band:
   creatures:
     orc_sergeant: 1
@@ -12,3 +21,4 @@ orc_war_band:
     - The orcs are out looking to loot and pillage. They will not attack a clearly superior force by choice, but they will fight to the death if cornered.
 ---
 = partial('partials/encounter_worksheet', locals: { encounter: current_page.data.orc_war_band })
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.ghostwise_nightgliders })

@@ -1,0 +1,61 @@
+name: Ghostwise Nightglider
+tier: journeyman
+group: party
+size_class: small
+type: humanoid
+keywords:
+  - halfling
+alignment: neutral
+ac: 14
+armor:
+  - leather
+hd: 6d6+12
+speed:
+  walk: 25
+ability_scores:
+  str: 12
+  dex: 17
+  con: 14
+  int: 10
+  wis: 13
+  cha: 10
+skills:
+  animal_handling: 3
+  stealth: 5
+languages:
+  - common
+  - halfling
+features:
+  brave:
+    text:
+      - The halfling has advantage on saving throws against being frightened.
+  halfling_nimbleness:
+    text:
+      - The halfling can move through the space of any creature of a larger size.
+  silent_speech:
+    text:
+      - The ghostwise halfling can speak telepathically to any creature within 30 ft. The creature understands only if it shares a language. The ghostwise halfling can speak telepathically with only one creature at a time.
+actions:
+  multiattack:
+    text:
+      - The nightglider makes two attacks with its shortbow.
+  shortbow:
+    weapon: true
+    ranged: true
+    attack: true
+    hit: 5
+    range: [80, 320]
+    targets: 1
+    damage: 1d6+3
+    damage_type: piercing
+  dagger:
+    weapon: true
+    ranged: true
+    melee: true
+    attack: true
+    hit: 5
+    reach: 5
+    range: [20, 60]
+    targets: 1
+    damage: 1d4+3
+    damage_type: piercing

@@ -16,7 +16,7 @@ ability_scores:
   wis: 12
   cha: 7
 skills:
-  perception: +3
+  perception: 3
 features:
   keen hearing and smell:
     text:

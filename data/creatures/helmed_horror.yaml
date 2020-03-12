@@ -1,0 +1,62 @@
+name: Helmed Horror
+size_class: medium
+type: construct
+alignment: neutral
+ac: 20
+armor:
+  - plate
+  - shield
+hd: 8d8+24
+speed:
+  walk: 30
+  fly: 30
+ability_scores:
+  str: 18
+  dex: 13
+  con: 16
+  int: 10
+  wis: 10
+  cha: 10
+skills:
+  perception: 5
+resistance:
+  - bludgeoning, piercing, and slashing from nonmagical weapons that aren't adamantine
+damage_immunity:
+  - force
+  - necrotic
+  - poison
+condition_immunity:
+  - blinded
+  - charmed
+  - deafened
+  - frightened
+  - paralyzed
+  - petrified
+  - poisoned
+  - stunned
+senses:
+  blindsight: 60
+languages:
+  - Orcish (can't speak)
+cr: 4
+features:
+  magic_resistance:
+    text:
+      - The helmed horror has advantage on saving throws against spells and other magical effects.
+  spell_immunity:
+    text:
+      - The helmed horror is immune to <span class="spell">heat metal</span>, <span class="spell">shatter</span>, and <span class="spell">slow</span>.
+actions:
+  multiattack:
+    text:
+      - The helmed horror makes two longsword attacks.
+  longsword:
+    melee: true
+    weapon: true
+    attack: true
+    hit: 6
+    reach: 5
+    targets: 1
+    damage: 1d8+4
+    damage_type: slashing
+

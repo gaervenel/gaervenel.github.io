@@ -29,7 +29,7 @@ features:
 actions:
   multiattack:
     text:
-      - The merrow makes two attacks: one with its bite and one with its claws or harpoon.
+      - "The merrow makes two attacks: one with its bite and one with its claws or harpoon."
   bite:
     melee: true
     weapon: true

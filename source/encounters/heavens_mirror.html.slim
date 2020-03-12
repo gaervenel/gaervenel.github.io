@@ -1,0 +1,21 @@
+---
+title: Heaven's Mirror Encounters
+
+tomb_guardian:
+  creatures:
+    helmed_horror: 1
+  question:
+    - Can the PCs acquire and escape with the <span class="magic">headdress of the warchief</span>?
+  motivation:
+    - The helmed horror's only purpose is to protect the warchief's tomb from desecration and looting.
+
+corrupted_water_spirits:
+  creatures:
+    water_spirit_corrupted: 2
+  question:
+    - Can the PCs make it to the tomb of the orc warchief?
+  motivation:
+    - The spirits attack anything that comes near the mirror of heaven.
+---
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.corrupted_water_spirits })
+= partial('partials/encounter_worksheet', locals: { encounter: current_page.data.tomb_guardian })

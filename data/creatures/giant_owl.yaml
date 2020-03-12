@@ -1,0 +1,42 @@
+name: Giant Owl
+size_class: large
+type: beast
+alignment: unaligned
+ac: 12
+hd: 3d10+3
+speed:
+  walk: 5
+  fly: 60
+ability_scores:
+  str: 13
+  dex: 15
+  con: 12
+  int: 8
+  wis: 13
+  cha: 10
+skills:
+  perception: 5
+  stealth: 4
+senses:
+  darkvision: 120
+languages:
+  - giant owl
+  - understands Common, Elvish, and Sylvan but can't speak them
+cr: 0.25
+features:
+  flyby:
+    text:
+      - The owl doesn't provoke opportunity attacks when it flies out of an enemy's reach.
+  keen_hearing_and_sight:
+    text:
+      - The owl has Advantage on Wisdom (Perception) checks that rely on hearing or sight.
+actions:
+  talons:
+    weapon: true
+    melee: true
+    attack: true
+    hit: 3
+    reach: 5
+    targets: 1
+    damage: 2d6+1
+    damage_type: slashing

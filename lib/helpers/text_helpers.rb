@@ -1,6 +1,6 @@
 module TextHelpers
 
-  IGNORE_TITLE_CASE = %w(and for from in of on or the to)
+  IGNORE_TITLE_CASE = %w(and at for from in of on or the to)
 
   ABILITY_SCORES = {
     str: 'Strength',

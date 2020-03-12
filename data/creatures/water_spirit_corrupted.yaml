@@ -49,7 +49,7 @@ actions:
     hit: 5
     reach: 5
     targets: 1
-    damage: 2d6+3
+    damage: 1d10+3
     damage_type: bludgeoning
     extra_damage: 2d8
     extra_damage_type: acid
