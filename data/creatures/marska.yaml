@@ -1,0 +1,67 @@
+name: Marska
+tier: adventurer
+number: pair
+size_class: medium
+type: humanoid
+keywords:
+  - orc
+alignment: chaotic evil
+ac: 15
+armor:
+  - scale mail
+hd: 12d8+36
+speed:
+  walk: 30
+ability_scores:
+  str: 20
+  dex: 12
+  con: 16
+  int: 12
+  wis: 10
+  cha: 10
+skills:
+  athletics: 8
+  intimidation: 3
+  perception: 3
+senses:
+  darkvision: 60
+languages:
+  - common
+  - orc
+features:
+  aggressive:
+    text:
+      - As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.
+  orcish_fury:
+    text:
+      - Marska deals an extra 4 (1d8) damage when she hits with a weapon attack (included in the attacks).
+actions:
+  multiattack:
+    text:
+      - Marska makes two attacks with her maul or her spear.
+  maul:
+    attack: true
+    melee: true
+    weapon: true
+    hit: 8
+    reach: 5
+    damage: 2d6+5
+    damage_type: bludgeoning
+    extra_damage: 1d8
+    extra_damage_type: bludgeoning
+  spear:
+    attack: true
+    melee: true
+    ranged: true
+    weapon: true
+    hit: 8
+    reach: 5
+    range: [20, 60]
+    damage: 1d6+5
+    damage_type: piercing
+    extra_damage: 1d8
+    extra_damage_type: piercing
+  battle_cry:
+    recharge: 1/day
+    text:
+      - Each creature of Marska's choice that is within 30 feet of her, can hear hear, and is not already affected by Battle Cry gains advantage on attack rolls until the start of Marska's next turn. Marksa can then make one attack as a bonus action.

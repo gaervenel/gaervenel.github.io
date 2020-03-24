@@ -1,0 +1,58 @@
+name: Orc Deathsworn
+tier: journeyman
+number: party
+size_class: medium
+type: humanoid
+keywords:
+  - orc
+alignmet: chaotic evil
+ac: 16
+armor:
+  - scale mail
+hd: 6d8+12
+speed:
+  walk: 30
+ability_scores:
+  str: 16
+  dex: 14
+  con: 14
+  int: 9
+  wis: 11
+  cha: 9
+skills:
+  intimidation: 1
+senses:
+  darkvision: 60
+condition_immunity:
+  - frightened
+languages:
+  - orc (cannot speak)
+features:
+  aggressive:
+    text:
+      - As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.
+  mute:
+    text:
+      - The orc deathsworn has had its tongue removed and cannot speak.
+  rot_eater:
+    text:
+      - The death eater has advantage on saving throws against poison.
+  sunlight_sensitivity:
+    text:
+      - While in sunlight, the orc has disadvantage on attack rolls and Wisdom (Perception) checks that rely on sight.
+actions:
+  multiattack:
+    text: The orc deathsworn makes two attacks with its handaxes.
+  hand_axe:
+    melee: true
+    ranged: true
+    weapon: true
+    attack: true
+    hit: 5
+    reach: 5
+    range: [20, 60]
+    targets: 1
+    damage: 1d6+3
+    damage_type: slashing
+    text:
+      - ", and the target must succeed on a DC 12 Constitution saving throw or be poisoned for one minute."

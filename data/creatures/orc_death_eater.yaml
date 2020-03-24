@@ -1,0 +1,63 @@
+name: Orc Death Eater
+tier: journeyman
+number: pair
+size_class: medium
+type: humanoid
+keywords:
+  - orc
+alignment: chaotic evil
+ac: 14
+armor:
+  - hide
+hd: 7d8+21
+speed:
+  walk: 30
+ability_scores:
+  str: 10
+  dex: 14
+  con: 16
+  int: 11
+  wis: 16
+  cha: 8
+skills:
+  medicine: 5
+senses:
+  darkvision: 60
+resistance:
+  - poison
+languages:
+  - orc
+  - common
+features:
+  aggressive:
+    text:
+      - As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.
+  rot_eater:
+    text:
+      - The death eater has advantage on saving throws against poison.
+  sunlight_sensitivity:
+    text:
+      - While in sunlight, the orc has disadvantage on attack rolls and Wisdom (Perception) checks that rely on sight.
+spellcasting:
+  level: 5
+  ability: wis
+  dc: 13
+  attack: 5
+  intro: The orc death eater is a 5th-level spellcaster.
+  outro: "It has the following cleric spells prepared:"
+  slots: [ 0, 4, 3, 2 ]
+  spells:
+    - [ resistance, spare the dying, toll the dead ]
+    - [ bane, false life, inflict wounds ]
+    - [ blindness/deafness, gentle repose, ray of enfeeblement ]
+    - [ remove curse, speak with dead, spirit guardians ]
+actions:
+  dagger:
+    melee: true
+    weapon: true
+    attack: true
+    hit: 4
+    reach: 5
+    targets: 1
+    damage: 1d4+2
+    damage_type: piercing

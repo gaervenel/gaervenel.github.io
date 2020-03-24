@@ -1,0 +1,59 @@
+name: Manticore
+size_class: large
+type: monstrosity
+alignment: lawful evil
+ac: 14
+armor:
+  - natural armor
+hd: 8d10+24
+speed:
+  walk: 30
+  fly: 50
+ability_scores:
+  str: 17
+  dex: 16
+  con: 17
+  int: 7
+  wis: 12
+  cha: 8
+senses:
+  darkvision: 60
+languages:
+  - common
+cr: 3
+features:
+  tail_spike_regrowth:
+    text:
+      - The manticore has twenty-four tail spikes. Used spikes regrow when the manticore finishes a long rest.
+actions:
+  multiattack:
+    text:
+      - "The manitcore makes three attacks: one with its bite and two with its claws, or three with its tail spikes."
+  bite:
+    melee: true
+    weapon: true
+    attack: true
+    hit: 5
+    reach: 5
+    targets: 1
+    damage: 1d8+3
+    damage_type: piercing
+  claw:
+    melee: true
+    weapon: true
+    attack: true
+    hit: 5
+    reach: 5
+    targets: 1
+    damage: 1d6+3
+    damage_type: slashing
+  tail_spike:
+    melee: false
+    ranged: true
+    weapon: true
+    attack: true
+    hit: 5
+    range: [100, 200]
+    targets: 1
+    damage: 1d8+3
+    damage_type: piercing
