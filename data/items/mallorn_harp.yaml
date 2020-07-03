@@ -1,0 +1,8 @@
+name: Mallorn Harp
+type: wondrous item
+rarity: rare
+attunement: requires attunement by someone proficient in playing the harp
+text:
+  - This small harp, carved from golden wood freely given by a mallorn tree, is an exquisite instrument, superior to an ordinary harp in every way. A creature that attempts to play the harp without being attuned to it becomes cursed and suffers disadvantage on Charisma checks for 24 hours.
+  - While you lightly strum this harp, you have advantange on Charisma checks made to interact with plants.
+  - In addition, you can use an action to play the harp and cast one of the following spells from it&#58; <span class="spell">goodberry</span>, <span class="spell">plant growth</span>, <span class="spell">speak with plants</span>, or <span class="spell">awaken</span>. If you cast <span class="spell">plant growth</span>, you must cast the version with a casting time of 1 action. If you cast <span class="spell">awaken</span>, you must target a plant, and the spell fails if any awakened plant is already charmed by you. Once the harp has been used to cast a spell, it can't be used to cast that spell again until the next dawn.
