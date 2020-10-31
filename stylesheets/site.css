@@ -189,17 +189,21 @@
   .divider {
     display: none; } }
 
-h2, h3, h4, h5 {
+h1, h2, h3, h4, h5 {
   color: #b18400;
   font-family: 'Mr Eaves Small Caps', serif;
   font-variant: small-caps; }
+
+h1 {
+  font-size: 60px;
+  margin: 0; }
 
 h2 {
   font-size: 48px;
   margin-top: 0;
   margin-bottom: 1rem; }
 
-h2 + p::first-letter {
+h2 ~ p:first-of-type::first-letter {
   font-family: 'Solbera Imitation', serif;
   color: #b18400;
   float: left;
@@ -207,7 +211,7 @@ h2 + p::first-letter {
   line-height: 0.8;
   padding-right: 0.3rem; }
 
-h2 + p::first-line {
+h2 ~ p:first-of-type::first-line {
   font-family: 'Mr Eaves Small Caps', serif;
   font-variant: small-caps;
   font-size: 20px;
@@ -480,14 +484,13 @@ aside {
   .encounter .stat-block .bar {
     border-left: 25em solid #ffce3b; }
 
-.magic-item {
-  margin-right: 1cm; }
-  .magic-item .heading > * {
-    margin: 0; }
-  .magic-item .heading {
-    margin-bottom: 0.5rem; }
+.magic-item .heading {
+  margin-bottom: 0.5rem; }
 
-.magic-item + .magic-item {
+.cards .magic-item {
+  margin-right: 1cm; }
+
+.cards .magic-item + .magic-item {
   margin-top: 1.5in; }
 
 .bg {
