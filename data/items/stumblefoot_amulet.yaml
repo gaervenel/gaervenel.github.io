@@ -8,5 +8,7 @@ text:
 effects:
   luff up:
     - The amulet fills you with confidence as you leap into the air, and you feel the wind supporting you. You can use your Wisdom score instead of your Strength score when calculating how long or high you can jump.
-  ox-eye:
-    - While wearing this amulet, as a reaction when you take lightning damage, you can expend 1 charge to cast <span class="spell">absorb elements</span>.
+  cat's paws:
+    - While wearing the amulet, you can cast <span class="spell">gust</span> from the amulet at will as an action, without expending a charge.
+  header:
+    - While wearing the amulet, you can expend 2 charges as an action to cast <span class="spell">gust of wind</span> from the amulet.

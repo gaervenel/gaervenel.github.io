@@ -5,5 +5,10 @@ title: Gaervenel &amp; Elubar
 h1 = current_page.data.title
 
 ul
-  - sitemap.resources.select { |resource| resource.data.public && resource != current_page }.each do |resource|
+  - sitemap.resources.select { |resource| resource.data.public && resource != current_page && !resource.data.campaign }.each do |resource|
+    li = link_to(resource.data.title, resource, relative: true)
+
+h3 Campaigns
+ul
+  - sitemap.resources.select { |resource| resource.data.public && resource.data.campaign }.each do |resource|
     li = link_to(resource.data.title, resource, relative: true)

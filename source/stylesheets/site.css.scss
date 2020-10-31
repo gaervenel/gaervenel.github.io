@@ -83,19 +83,25 @@ $black: #111;
     }
 }
 
-h2, h3, h4, h5 {
+h1, h2, h3, h4, h5 {
     color: $heading;
     font-family: 'Mr Eaves Small Caps', serif;
     font-variant: small-caps;
 }
 
+h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+// h2 is only to be used for chapter headings
 h2 {
     font-size: 48px;
     margin-top: 0;
     margin-bottom: 1rem;
 }
 
-h2 + p::first-letter {
+h2 ~ p:first-of-type::first-letter {
     font-family: 'Solbera Imitation', serif;
     color: $heading;
     float: left;
@@ -104,7 +110,7 @@ h2 + p::first-letter {
     padding-right: 0.3rem;
 }
 
-h2 + p::first-line {
+h2 ~ p:first-of-type::first-line {
     font-family: 'Mr Eaves Small Caps', serif;
     font-variant: small-caps;
     font-size: 20px;
@@ -475,17 +481,20 @@ aside {
 }
 
 .magic-item {
-    .heading > * {
-        margin: 0;
-    }
     .heading {
         margin-bottom: 0.5rem;
     }
-    margin-right: 1cm;
 }
 
-.magic-item + .magic-item {
-    margin-top: 1.5in;
+// Apply this style only on worksheets used to create magic item "cards" for
+// handing out to players.
+.cards {
+    .magic-item {
+        margin-right: 1cm;
+    }
+    .magic-item + .magic-item {
+        margin-top: 1.5in;
+    }
 }
 
 .bg {
