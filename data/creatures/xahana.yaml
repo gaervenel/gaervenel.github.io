@@ -1,0 +1,66 @@
+name: Xahana, the Blue Devil
+tier: veteran
+number: pair
+size_class: small
+type: humanoid
+keywords:
+  - gnome
+alignment: chaotic evil
+ac: 13
+armor:
+  - 16 with mage armor
+hd: 13d6+52
+speed:
+  walk: 25
+ability_scores:
+  str: 10
+  dex: 16
+  con: 19
+  int: 12
+  wis: 14
+  cha: 20
+saving_throws:
+  con: 8
+  cha: 10
+skills:
+  deception: 10
+  insight: 5
+  perception: 6
+  persuasion: 10
+senses:
+  darkvision: 60
+languages:
+  - common
+  - gnomish
+  - elvish
+  - draconic
+features:
+  gnome_cunning:
+    text:
+      - You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.
+spellcasting:
+  level: 12
+  ability: cha
+  dc: 17
+  attack: 9
+  intro: Xahana is a 12th-level spellcaster.
+  outro: "She knows the following sorcerer spells:"
+  slots: [ 0, 4, 3, 3, 3, 2, 1 ]
+  spells:
+    - [ control flames, message, mind sliver, minor illusion, shocking grasp, thunderclap ]
+    - [ chaos bolt, mage armor, shield ]
+    - [ mirror image, tasha's mind whip ]
+    - [ counterspell, enemies abound, thunder step ]
+    - [ storm sphere, summon elemental ]
+    - [ dominate person, synaptic static ]
+    - [ chain lightning, globe of invulnerability ]
+actions:
+  dagger:
+    melee: true
+    weapon: true
+    attack: true
+    hit: 7
+    reach: 5
+    targets: 1
+    damage: 1d4+3
+    damage_type: piercing

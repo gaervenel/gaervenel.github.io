@@ -1,19 +1,21 @@
 name: Vorastrixiv
 type: wondrous item
-rarity: very rare
-attunement: requires attunement by a character with at least 13 Charisma
+rarity: artifact
+attunement: requires attunement by a spellcaster
 text:
   - Vorastrixiv is a star sapphire that contains the soul of a powerful dragonborn sorceress, Vorastrixiv Itpro’atonis. Vorastrixiv was the leader of a conclave of sorcerers during the height or Orthonax's reign. She used powerful magic to transfer her consciousness into other dragonborn's bodies, thereby attaining a kind of immortality. After a few centuries, her apprentice Nebani, who was to perform the ritual that would allow the transfer, instead betrayed her mistress and directed her soul into this gem instead.
-  - Attuning to Vorastrixiv grants no immediate benefits other than being able to communicate with her. In order to unlock more of Vorastrixiv's power, you must embed the jewel in your flesh. By holding it against your chest and asking Vorastrixiv to share her power, she can cause it to fuse into your chest, becoming one with your body. Once you have done so, the jewel cannot be removed except by killing the host creature, and you cannot voluntarily end your attunement with Vorastrixiv. Vorastrixiv, however, can end your attunement at any time if she so chooses.
+  - A spellcaster who attunes to Vorastrixiv immediately takes 4d10 psychic damage. Attuning to Vorastrixiv grants no immediate benefits other than being able to communicate with her. In order to unlock more of Vorastrixiv's power, you must embed the jewel in your flesh. By holding it against your chest and asking Vorastrixiv to share her power, she can cause it to fuse into your chest, becoming one with your body. Once you have done so, the jewel cannot be removed except by killing the host creature, and you cannot voluntarily end your attunement with Vorastrixiv. Vorastrixiv, however, can end your attunement at any time if she so chooses.
 effects:
-  arcane_conduit:
-    - While you have the jewel embedded in your flesh and are attuned to Vorastrixiv, you gain the ability to perceive and manipulate the wild forces of chaos underlying the order of creation. When you gain a level you can choose to gain a level in the sorcerer class. If you do not already have levels in the sorcerer class, you become a wild magic sorcerer when you do so.
-    - If you remove the jewel or lose your attunement to Vorastrixiv, you keep any sorcerer levels gained in this way, but you cannot gain additional sorcerer levels.
+  conduit_of_chaos:
+    - While you have the jewel embedded in your flesh and are attuned to Vorastrixiv, you gain the ability to perceive and manipulate the wild forces of chaos underlying the order of creation. You can use an action to cast *chaos bolt* as a 1st-level spell. After you cast the spell, roll a d6. On a roll of 1&ndash;5, you can't cast it again until the next dawn.
+  insinuate_paranoia:
+    - While you have the jewel embedded in your flesh and are attuned to Vorastrixiv, you gain the ability to spread Vorastrixiv's paranoid nature to others. You can use an action to cast *enemies abound* as a 3rd-level spell. After you cast the spell, roll a d6. On a roll of 1&ndash;5, you can't cast it again until the next dawn.
   lightning_resistance:
     - While you have the jewel embedded in your flesh and are attuned to Vorastrixiv, you gain resistance to lightning damage.
-  vorastrixiv_spells:
-    - While you have the jewel embedded in your flesh and are attuned to Vorastrixiv, you gain the ability to cast the following additional spells as sorcerer spells when your sorcerer level is high enough to learn spells of that level. These spells are a manifestation of Vorastrixiv's power; you do not actually learn the spells, and you lose the ability to cast them if you are no longer attuned to Vorastrixiv.
-    - <table><thead><tr><th>Spell Level</th><th>Spell</th></tr></thead><tbody><tr><td>1st</td><td class="spell">charm person</td></tr><tr><td>2nd</td><td class="spell">suggestion</td></tr><tr><td>3rd</td><td class="spell">tongues</td></tr><tr><td>4th</td><td class="spell">dominate beast</td></tr><tr><td>5th</td><td class="spell">dominate person</td></tr></tbody></table>
+  second_self:
+    - While you have the jewel embedded in your flesh and are attuned to Vorastrixiv, you can't be charmed or frightened (except by Vorastrixiv).
+  timeless_presence:
+    - While you have the jewel embedded in your flesh and you are attuned to Vorastrixiv, your charisma score increases by 2, to a maximum of 24.
   willing_vessel:
     - Vorastrixiv may try to trick an attuned creature into embedding the jewel, but she cannot force them to do so. However, once embedded, Vorastixiv gains more influence. While you have Vorastrixiv embedded in your flesh, you have disadvantage on Charisma saving throws to prevent her from taking control of you.
   sentience:
@@ -21,4 +23,4 @@ effects:
     - Vorastrixiv can speak, read, and understand Common and Draconic, and can communicate telepathically with a creature attuned to her. Her voice is sibilant and soft. While you are attuned to her, Vorastrixiv also understands every language you know.
   personality:
     - Vorastrixiv is manipulative, ruthless, and utterly selfish. She is also haughty and refined, having lived an aristocratic life during the height of the old Zhusan empire.
-    - Vorastrixiv's purpose is to gain revenge on her betrayer and to find a way to free herself from imprisonment in this jewel. She assumes that Nebani has persisted through the centuries using her own technique for transferring her consciousness. She believes that if she can regain control of the conclave, she will be able to shatter her prison and be reborn in a new vessel. She is confident that if she can convince the conclave of Nebani's treachery, they will side with her in seeking redress for the betrayal.
+    - Vorastrixiv's purpose is to rebuild the conclave and gain revenge on her betrayer. She assumes that Nebani has persisted through the centuries using her own technique for transferring her consciousness. She believes that if she can regain control of the conclave, she will be able to shatter her prison and be reborn in a new vessel. She is confident that if she can convince the conclave of Nebani's treachery, they will side with her in seeking redress for the betrayal.
