@@ -44,3 +44,9 @@ set :helpers_dir, 'lib/helpers'
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+set :build_dir, 'docs'
+# Need to clean up .git repositories from submodules in build output
+after_build do |builder|
+  builder.thor.run 'rm -rf docs/fonts/5e/.git'
+end

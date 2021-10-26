@@ -3,7 +3,7 @@ type: wondrous item
 rarity: rare
 attunement: requires attunement by an orc or half-orc
 text:
-  - While wearing this black iron, spiked band on your head, your Charisma score increases by 2 (to a maximum of 20), and you have advantage on Charisma checks made to interact with orcs.
+  - While wearing this black iron, spiked band on your head, your Charisma score increases by 2 (to a maximum of 20), and you have advantage on Charisma checks made to interact with orcs. You also gain proficiency in the Intimidation skill.
   - In addition, you gain the ability to move up to your speed towards a hostile creature you can see as a bonus action. You must end this movement closer to the hostile creature.
   - While wearing this headdress, you can cause your eyes to glow with a cold blue light.
   - <span class="subhead">Sentience.</span> The <span class="magic">headdress of the warchief</span> is a sentient chaotic evil item with an Intelligence of 17, a Wisdom of 12, and a Charisma of 19. It has hearing and darkvision out to a range of 120 feet.
