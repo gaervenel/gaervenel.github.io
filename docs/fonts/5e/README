@@ -1,6 +1,6 @@
 <h1 id="summary">Summary</h1>
 
-<p>This is a copy of Solbera's CC-BY-SA-4.0 fonts taken from <a href="https://www.reddit.com/r/UnearthedArcana/comments/3vpphx/5e_font_package_embeddable_cc_edition/">his Reddit thread</a>, combined with Ryrok's fixes from <a href="https://www.reddit.com/r/UnearthedArcana/comments/4loka0/fixed_versions_of_solberas_fonts/">this Reddit thread</a>.</p>
+<p>This is a copy of Solbera's CC-BY-SA-4.0 fonts taken from <a href="https://www.reddit.com/r/UnearthedArcana/comments/3vpphx/5e_font_package_embeddable_cc_edition/">his Reddit thread</a>, combined with Ryrok's fixes from <a href="https://www.reddit.com/r/UnearthedArcana/comments/4loka0/fixed_versions_of_solberas_fonts/">this Reddit thread</a> and fixes and additions by <a href="https://www.reddit.com/r/UnearthedArcana/comments/71wzc2/new_indesign_template_and_open_source_fonts/">Ners</a> ("Remake") with some minor adjustment made by <a href="http://github.com/lucastucious">LUCASTUCIOUS</a>.</p>
 
 <p>The following table contains names and usage details:</p>
 
@@ -8,14 +8,14 @@
   <thead>
     <tr>
       <th>Original Font</th>
-      <th>Solbera's Font</th>
+      <th>Solbera's/Ners' Font</th>
       <th><a href="http://taxidermicowlbear.weebly.com/dd-fonts.html">Usage</a></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Scala Sans</td>
-      <td>Scaly Sans</td>
+      <td>Bookmania</td>
+      <td>Bookinsanity (Remake)</td>
       <td>Body text</td>
     </tr>
     <tr>
@@ -30,13 +30,8 @@
     </tr>
     <tr>
       <td>Mrs Eaves Small Caps</td>
-      <td>Mr Eaves Small Caps</td>
+      <td>Mr Eaves Small Caps (Remake)</td>
       <td>Headings</td>
-    </tr>
-    <tr>
-      <td>Bookmania</td>
-      <td>Bookinsanity</td>
-      <td>Tables</td>
     </tr>
     <tr>
       <td>Dai Vernon Misdirect</td>
@@ -44,8 +39,18 @@
       <td>Titles of tables</td>
     </tr>
     <tr>
-      <td>(unknown )</td>
+      <td>Scala Sans</td>
+      <td>Scaly Sans (Remake)</td>
+      <td>Tables</td>
+    </tr>
+    <tr>
+      <td>(unknown)</td>
       <td>Solbera Imitation</td>
+      <td>Drop caps</td>
+    </tr>
+    <tr>
+      <td>(unknown)</td>
+      <td>Dungeon Drop Case (Ners)</td>
       <td>Drop caps</td>
     </tr>
   </tbody>
